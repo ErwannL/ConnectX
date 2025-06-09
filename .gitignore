@@ -1,6 +1,43 @@
-
-logs/
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+logs/
+ai_logs/
+
+# Environment
+.env
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
 
 *.pyc
 *.pyo
@@ -10,3 +47,8 @@ __pycache__/
 *.pywz
 *.pyzw
 *.pyzwz
+
+# Game specific
+training_ai/
+models/
+*.pkl

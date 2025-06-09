@@ -3,14 +3,14 @@
     "sfx_volume": 100,
     "player_colors": [
         [
-            255,
             0,
-            0
+            255,
+            255
         ],
         [
-            255,
             128,
-            0
+            0,
+            255
         ]
     ],
     "ai_difficulty": "HARD",

@@ -10,6 +10,10 @@ from settings import Settings
 from ai import AI
 import time
 
+# Check for dev mode
+DEV_MODE = len(sys.argv) > 1 and sys.argv[1] == "dev"
+logging.debug(f"DEV_MODE: {DEV_MODE}")
+
 # Set up logging
 log_dir = "logs"
 if not os.path.exists(log_dir):
@@ -62,21 +66,24 @@ FULLSCREEN_HEIGHT = screen_info.current_h
 # Constants
 BOARD_ROWS = 6
 BOARD_COLS = 7
-SQUARE_SIZE = 80
+SQUARE_SIZE = 100
 RADIUS = int(SQUARE_SIZE/2 - 5)
 
 # Colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-BLUE = (13, 27, 42)  # Dark blue background
+BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 YELLOW = (255, 255, 0)
 GRAY = (128, 128, 128)
-COLOR_PALETTE = [
-    (255, 0, 0), (255, 255, 0), (0, 255, 0), (0, 0, 255),
-    (255, 128, 0), (128, 0, 255), (0, 255, 255), (255, 0, 255),
-    (255, 255, 255), (128, 128, 128)
-]
+GREEN = (0, 255, 0)
+DARK_GREEN = (0, 200, 0)
+DARK_BLUE = (0, 0, 200)
+DARK_RED = (200, 0, 0)
+DARK_YELLOW = (200, 200, 0)
+DARK_GRAY = (64, 64, 64)
+LIGHT_GRAY = (192, 192, 192)
+TRANSPARENT = (0, 0, 0, 0)
 
 class GameState(Enum):
     MENU = 1
@@ -145,7 +152,11 @@ class ColorPicker:
         self.font = pygame.font.SysFont('Comic Sans MS', 24)
         self.swatch_size = 30
         self.swatch_margin = 10
-        self.palette = COLOR_PALETTE
+        self.palette = [
+            RED, YELLOW, GREEN, BLUE,
+            DARK_RED, DARK_YELLOW, DARK_GREEN, DARK_BLUE,
+            WHITE, GRAY
+        ]
 
     def draw(self, screen):
         label_surface = self.font.render(self.label, True, WHITE)
@@ -242,7 +253,7 @@ class FullscreenToggleButton:
         return False
 
 class Game:
-    def __init__(self):
+    def __init__(self, model_file=None):
         self.settings = Settings()
         self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.display.set_caption("ConnectX")
@@ -259,7 +270,6 @@ class Game:
         self.music_volume = self.settings.current_settings['music_volume']
         self.sfx_volume = self.settings.current_settings['sfx_volume']
         self.sfx_enabled = self.sfx_volume > 0
-        self.ai_player = AI(self.ai_difficulty)
         self.winner = None
         self.draw = False
         self.show_end_popup = False
@@ -271,16 +281,31 @@ class Game:
         self.anim_drop_piece = None
         self.anim_drop_y = None
         self.anim_speed = 30
+        self.ai_calculation_board = None  # For dev mode visualization
+        # Initialize board dimensions early so AI can use them
+        self.board_x = (WINDOW_WIDTH - (BOARD_COLS * SQUARE_SIZE)) // 2
+        self.board_y = (WINDOW_HEIGHT - (BOARD_ROWS * SQUARE_SIZE)) // 2
         self.init_buttons()
         self.init_settings_controls()
         self.init_play_menu_controls()
         self.load_sounds()
         self.play_music()
-        self.board_x = (WINDOW_WIDTH - (BOARD_COLS * SQUARE_SIZE)) // 2
-        self.board_y = (WINDOW_HEIGHT - (BOARD_ROWS * SQUARE_SIZE)) // 2 - (SQUARE_SIZE // 2)
         self.vs_ai = False
         self.ai_starts = False
         self.go_back_playmenu = Button(self.screen.get_width()//2 - 100, self.screen.get_height()//2 + 300, 200, 50, "GO BACK")
+
+        self.ai_player = AI(self.ai_difficulty, model_file)
+        self.ai_player.set_drawing_params({
+            'board_x': self.board_x,
+            'board_y': self.board_y,
+            'square_size': SQUARE_SIZE,
+            'radius': RADIUS,
+            'BOARD_ROWS': BOARD_ROWS,
+            'BOARD_COLS': BOARD_COLS,
+            'BLUE': BLUE,
+            'BLACK': BLACK,
+            'player_colors': self.player_colors
+        })
 
     def init_buttons(self):
         button_width = 240
@@ -352,10 +377,22 @@ class Game:
             self.is_fullscreen = True
             self.screen = pygame.display.set_mode((FULLSCREEN_WIDTH, FULLSCREEN_HEIGHT), pygame.FULLSCREEN)
         self.board_x = (self.screen.get_width() - (BOARD_COLS * SQUARE_SIZE)) // 2
-        self.board_y = (self.screen.get_height() - (BOARD_ROWS * SQUARE_SIZE)) // 2 - (SQUARE_SIZE // 2)
+        self.board_y = (self.screen.get_height() - (BOARD_ROWS * SQUARE_SIZE)) // 2
         self.init_buttons()
         self.init_settings_controls()
         self.init_play_menu_controls()
+        # Update drawing parameters for AI after screen size change
+        self.ai_player.set_drawing_params({
+            'board_x': self.board_x,
+            'board_y': self.board_y,
+            'square_size': SQUARE_SIZE,
+            'radius': RADIUS,
+            'BOARD_ROWS': BOARD_ROWS,
+            'BOARD_COLS': BOARD_COLS,
+            'BLUE': BLUE,
+            'BLACK': BLACK,
+            'player_colors': self.player_colors
+        })
 
     def draw_board(self, anim_drop=None):
         try:
@@ -367,12 +404,16 @@ class Game:
                 if self.vs_ai:
                     if self.current_player == self.human_piece:
                         turn_text = "Your Turn"
+                        logging.debug(f"Current Turn: Human ({self.human_piece})")
                     else:
                         turn_text = "AI's Turn"
+                        logging.debug(f"Current Turn: AI ({self.ai_piece})")
                 else:
                     turn_text = f"Player {self.current_player}'s Turn"
+                    logging.debug(f"Current Turn: Player {self.current_player}")
             else:
-                turn_text = "Game Over"  # Default text
+                turn_text = "Game Over"
+                logging.debug("Game Over")
 
             turn_surface = font.render(turn_text, True, WHITE)
             self.screen.blit(turn_surface, (self.screen.get_width()//2 - turn_surface.get_width()//2, 20))
@@ -380,13 +421,17 @@ class Game:
             # Draw board background
             for c in range(BOARD_COLS):
                 for r in range(BOARD_ROWS):
-                    pygame.draw.rect(self.screen, BLACK, 
-                                   (self.board_x + c*SQUARE_SIZE, 
-                                    self.board_y + r*SQUARE_SIZE + SQUARE_SIZE, 
+                    bg_rect_y = self.board_y + (BOARD_ROWS - 1 - r) * SQUARE_SIZE
+                    hole_y = int(self.board_y + (BOARD_ROWS - 1 - r) * SQUARE_SIZE + SQUARE_SIZE/2)
+                    logging.debug(f"BG Rect (Col {c}, Row {r}): y={{bg_rect_y}}")
+                    logging.debug(f"Hole (Col {c}, Row {r}): y={{hole_y}}")
+                    pygame.draw.rect(self.screen, BLACK,
+                                   (self.board_x + c*SQUARE_SIZE,
+                                    bg_rect_y,
                                     SQUARE_SIZE, SQUARE_SIZE))
-                    pygame.draw.circle(self.screen, BLUE, 
-                                     (int(self.board_x + c*SQUARE_SIZE + SQUARE_SIZE/2), 
-                                      int(self.board_y + r*SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE/2)), 
+                    pygame.draw.circle(self.screen, BLUE,
+                                     (int(self.board_x + c*SQUARE_SIZE + SQUARE_SIZE/2),
+                                      hole_y),
                                      RADIUS)
             
             # Draw pieces
@@ -400,20 +445,47 @@ class Game:
                             if int(t*4)%2 == 0:
                                 color = (min(color[0]+120,255), min(color[1]+120,255), min(color[2]+120,255))
                             glow = True
+                        piece_y = int(self.board_y + (BOARD_ROWS - 1 - r) * SQUARE_SIZE + SQUARE_SIZE/2)
+                        logging.debug(f"Placed Piece (Col {c}, Row {r}): y={{piece_y}}")
                         pygame.draw.circle(
                             self.screen, color,
                             (int(self.board_x + c*SQUARE_SIZE + SQUARE_SIZE/2),
-                             self.screen.get_height() - int(self.board_y + r*SQUARE_SIZE + SQUARE_SIZE/2)),
+                             piece_y),
                             RADIUS+4 if glow else RADIUS)
+
+            # Removed: Old on-screen AI calculation visualization
+            # if DEV_MODE and self.ai_calculation_board is not None:
+            #    for c in range(BOARD_COLS):
+            #        for r in range(BOARD_ROWS):
+            #            if self.ai_calculation_board[r][c] != 0:
+            #                color = self.player_colors[int(self.ai_calculation_board[r][c])-1]
+            #                color = (color[0]//2, color[1]//2, color[2]//2)
+            #                pygame.draw.circle(
+            #                    self.screen, color,
+            #                    (int(self.board_x + c*SQUARE_SIZE + SQUARE_SIZE/2),
+            #                     int(self.board_y + (BOARD_ROWS - 1 - r) * SQUARE_SIZE + SQUARE_SIZE/2)),
+            #                    RADIUS)
             
             # Draw animating drop
-            if anim_drop:
-                col, y, piece = anim_drop
-                color = self.player_colors[piece-1]
+            if self.animating:
+                color = self.player_colors[self.anim_drop_piece-1]
+                logging.debug(f"Animating Drop (Col {self.anim_drop_col}, Target Row {self.anim_drop_row}): current_y={{self.anim_drop_y}}")
+                # Draw the falling piece
                 pygame.draw.circle(
                     self.screen, color,
-                    (int(self.board_x + col*SQUARE_SIZE + SQUARE_SIZE/2), int(y)),
+                    (int(self.board_x + self.anim_drop_col*SQUARE_SIZE + SQUARE_SIZE/2),
+                     int(self.anim_drop_y)),
                     RADIUS)
+                # Draw a trail effect
+                trail_length = 20
+                for i in range(trail_length):
+                    alpha = int(255 * (1 - i/trail_length))
+                    trail_color = (*color, alpha)
+                    trail_surface = pygame.Surface((RADIUS*2, RADIUS*2), pygame.SRCALPHA)
+                    pygame.draw.circle(trail_surface, trail_color, (RADIUS, RADIUS), RADIUS)
+                    self.screen.blit(trail_surface,
+                                   (self.board_x + self.anim_drop_col*SQUARE_SIZE + SQUARE_SIZE/2 - RADIUS,
+                                    self.anim_drop_y - i*2))
             
             # Draw column indicators
             if not self.animating and not self.game_over:
@@ -631,6 +703,8 @@ class Game:
             self.ai_starts = self.toggle_starter.selected_index == 1
             self.current_player = self.ai_piece if self.ai_starts else self.human_piece
             self.reset_board()
+            # Start new game for AI (this will initialize logging if needed)
+            self.ai_player.start_new_game()
             self.game_state = GameState.PLAYING
             return True
         
@@ -664,37 +738,62 @@ class Game:
 
     def update_animation(self):
         if self.animating:
-            target_y = self.screen.get_height() - (self.board_y + self.anim_drop_row * SQUARE_SIZE + SQUARE_SIZE/2)
+            # Calculate target_y based on the actual board position
+            target_y = self.board_y + (BOARD_ROWS - 1 - self.anim_drop_row) * SQUARE_SIZE + SQUARE_SIZE/2
             if self.anim_drop_y < target_y:
                 self.anim_drop_y += self.anim_speed
             else:
+                # Animation complete - update board and check game state
                 self.animating = False
-                # # After animation completes, switch turns if needed
-                # if self.vs_ai and self.current_player == self.human_piece:
-                #     self.current_player = self.ai_piece
-                #     logging.debug(f"Animation complete. Switching to AI turn. Current player: {self.current_player}")
+                self.anim_drop_y = target_y
+                
+                # Update the board after animation completes
+                self.board[self.anim_drop_row][self.anim_drop_col] = self.anim_drop_piece
+                self.play_drop_sfx()
+                
+                # Check for win or draw after the piece is placed
+                if self.check_win(self.anim_drop_piece):
+                    self.winner = self.anim_drop_piece
+                    self.game_over = True
+                    self.show_end_popup = True
+                    logging.debug(f"Game over: Winner is {self.winner}")
+                elif self.check_draw():
+                    self.draw = True
+                    self.game_over = True
+                    self.show_end_popup = True
+                    logging.debug("Game over: Draw")
+                
+                # Switch turns if game is not over
+                if not self.game_over:
+                    if self.vs_ai:
+                        if self.current_player == self.human_piece:
+                            self.current_player = self.ai_piece
+                            logging.debug(f"Switching turn to AI ({self.ai_piece})")
+                        else:
+                            self.current_player = self.human_piece
+                            logging.debug(f"Switching turn to Human ({self.human_piece})")
+                    else:
+                        self.current_player = 3 - self.current_player
+                        logging.debug(f"Switching turn to Player {self.current_player}")
 
     def handle_playing_events(self, event):
-        if self.show_end_popup:
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                if self.end_popup_button.handle_event(event):
-                    self.game_state = GameState.MENU
-                    return True
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                self.game_state = GameState.MENU
-                return True
-            return True
-
         if event.type == pygame.QUIT:
             return False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 self.game_state = GameState.MENU
+                self.reset_board()
                 return True
             elif event.key == pygame.K_f:
                 self.toggle_fullscreen()
             elif event.key == pygame.K_s:
                 self.toggle_fullscreen(force_windowed=True)
+
+        if self.show_end_popup:
+            if self.end_popup_button.handle_event(event):
+                self.game_state = GameState.MENU
+                self.reset_board()
+                return True
 
         # Only process human moves if it's human's turn
         if event.type == pygame.MOUSEBUTTONDOWN and not self.game_over and not self.animating:
@@ -703,60 +802,39 @@ class Game:
                 return True
 
             mouse_x = event.pos[0]
+            logging.debug(f"Mouse click detected at x={mouse_x}. Current player: {self.current_player}, Game over: {self.game_over}, Animating: {self.animating}")
             for c in range(BOARD_COLS):
                 if self.board_x + c*SQUARE_SIZE <= mouse_x <= self.board_x + (c+1)*SQUARE_SIZE and self.board[BOARD_ROWS-1][c] == 0:
                     row = self.get_next_open_row(self.board, c)
+                    logging.debug(f"Valid click in column {c}, dropping piece for player {self.current_player} in row {row}")
                     self.animate_drop(c, row, self.current_player)
-                    self.board[row][c] = self.current_player
-                    self.play_drop_sfx()
-
-                    if self.check_win(self.current_player):
-                        self.winner = self.current_player
-                        self.game_over = True
-                        self.show_end_popup = True
-                    elif self.check_draw():
-                        self.draw = True
-                        self.game_over = True
-                        self.show_end_popup = True
-
-                    # FIXED: Proper turn switching logic
-                    if not self.game_over:
-                        if self.vs_ai:
-                            # For AI mode, switch to AI turn immediately
-                            self.current_player = self.ai_piece
-                        else:
-                            # For PvP, switch to other player
-                            self.current_player = 3 - self.current_player
                     break
         return True
 
     def make_ai_move(self):
         if not self.vs_ai or self.current_player != self.ai_piece or self.game_over or self.animating:
+            logging.debug(f"make_ai_move guard: vs_ai={self.vs_ai}, current_player={self.current_player}, ai_piece={self.ai_piece}, game_over={self.game_over}, animating={self.animating}")
             return
 
-        # AI thinking time
-        pygame.time.wait(int(self.settings.get_ai_thinking_time() * 1000))
+        # Get AI move without artificial delay
+        logging.debug(f"Initiating AI move for player {self.ai_piece}...")
         ai_col = self.ai_player.get_move(self.board.copy(), self.ai_piece)
+
+        # Add a small delay in dev mode to make AI thinking visible
+        if DEV_MODE:
+            time.sleep(0.5)
+
+        logging.debug(f"AI chose column: {ai_col}")
 
         if self.is_valid_location(self.board, ai_col):
             row = self.get_next_open_row(self.board, ai_col)
+            logging.debug(f"AI dropping piece in column {ai_col}, row {row}")
             self.animate_drop(ai_col, row, self.ai_piece)
-            self.board[row][ai_col] = self.ai_piece
-            self.play_drop_sfx()
-
-            if self.check_win(self.ai_piece):
-                self.winner = self.ai_piece
-                self.game_over = True
-                self.show_end_popup = True
-            elif self.check_draw():
-                self.draw = True
-                self.game_over = True
-                self.show_end_popup = True
-
-            # FIX: Switch back to human player after AI move
-            if not self.game_over:
-                self.current_player = self.human_piece
-                logging.debug(f"AI move completed. Switching to human turn. Current player: {self.current_player}")
+        else:
+            logging.error(f"AI chose an invalid column: {ai_col}")
+            # If AI chose invalid column, switch back to human player
+            self.current_player = self.human_piece
+            logging.debug("Invalid AI move, switching back to human player")
 
     def reset_board(self):
         self.board = np.zeros((BOARD_ROWS, BOARD_COLS))
@@ -770,10 +848,17 @@ class Game:
         self.anim_drop_col = None
         self.anim_drop_piece = None
         self.anim_drop_y = None
+        logging.debug("Board reset.")
+        # Stop AI threads if they're running
+        if self.vs_ai:
+            self.ai_player.stop_game()
 
     def set_ai_difficulty(self, difficulty):
         self.ai_difficulty = difficulty
         self.ai_player = AI(difficulty)
+        if difficulty == "HARD":
+            self.ai_player.max_depth = 5  # Set max depth for hard difficulty to 5
+        logging.debug(f"AI difficulty set to {difficulty}, max_depth: {self.ai_player.max_depth}")
 
     def check_win(self, piece):
         # Horizontal
@@ -810,9 +895,10 @@ class Game:
         self.anim_drop_col = col
         self.anim_drop_row = row
         self.anim_drop_piece = piece
-        start_y = 0
-        end_y = self.screen.get_height() - (self.board_y + row*SQUARE_SIZE + SQUARE_SIZE/2)
-        self.anim_drop_y = start_y
+        # Start from the top of the screen, aligned with the column
+        self.anim_drop_y = 0
+        self.anim_speed = 10  # Slower speed for better visualization
+        logging.debug(f"Animation started for piece {piece} in column {col}, target row {row}. Initial Y: {self.anim_drop_y}")
 
     def is_valid_location(self, board, col):
         return board[BOARD_ROWS-1][col] == 0
@@ -832,6 +918,7 @@ class Game:
                 # Handle AI's turn - FIXED: removed redundant player switching
                 if self.game_state == GameState.PLAYING:
                     if self.vs_ai and self.current_player == self.ai_piece and not self.game_over and not self.animating:
+                        logging.debug(f"AI's turn detected. Current player: {self.current_player}, Game over: {self.game_over}, Animating: {self.animating}")
                         self.make_ai_move()
 
                 for event in pygame.event.get():
@@ -864,12 +951,24 @@ class Game:
             pygame.quit()
             sys.exit(1)
 
+def main():
+    import sys
+    
+    # Check for command line arguments
+    model_file = None
+    if len(sys.argv) > 1:
+        if sys.argv[1].startswith("model"):
+            if len(sys.argv) > 2:
+                model_file = sys.argv[2]
+            else:
+                print("Error: Please specify a model file")
+                return
+        elif sys.argv[1].startswith("train"):
+            # If training is requested, don't start the game
+            return
+    
+    game = Game(model_file)
+    game.run()
+
 if __name__ == "__main__":
-    try:
-        logging.info("Starting ConnectX game")
-        game = Game()
-        game.run()
-    except Exception as e:
-        logging.error(f"Fatal error: {e}")
-        pygame.quit()
-        sys.exit(1)
+    main()
