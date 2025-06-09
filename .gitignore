@@ -49,6 +49,5 @@ Thumbs.db
 *.pyzwz
 
 # Game specific
-training_ai/
-models/
-*.pkl
+# training_ai/ and models/ are now tracked
+# *.pkl is now tracked
