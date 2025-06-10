@@ -1,18 +1,20 @@
 {
-    "music_volume": 33,
+    "music_volume": 30,
     "sfx_volume": 100,
     "player_colors": [
         [
-            0,
             255,
-            255
+            0,
+            0
         ],
         [
-            128,
-            0,
-            255
+            255,
+            255,
+            0
         ]
     ],
     "ai_difficulty": "HARD",
-    "ai_thinking_time": 1.0
+    "use_gpu": false,
+    "cpu_threads": 4,
+    "dev_mode": false
 }

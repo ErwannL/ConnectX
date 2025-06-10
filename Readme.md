@@ -2,17 +2,19 @@
 
 ## Overview
 
-A Python-based Connect Four game featuring dynamic AI opponents, customizable settings, and multiplayer functionality. Built with Pygame for graphics and sound.
+A Python-based Connect Four game featuring dynamic AI opponents, customizable settings, and multiplayer functionality. Built with Pygame for graphics and sound, and PyTorch for advanced AI capabilities.
 
 ## Features
 
 - Play against a friend or AI
 - Three AI difficulty levels (Easy, Medium, Hard)
+- GPU acceleration for AI (when available)
+- Multi-threaded CPU optimization
 - Customizable player colors
 - Adjustable music and sound effects
 - Fullscreen/windowed mode
 - AI thinking logs for Hard difficulty
-- AI training system
+- Neural network-based AI training system
 - Pre-trained model support
 - Development mode with AI visualization
 - Smooth animations
@@ -27,6 +29,8 @@ A Python-based Connect Four game featuring dynamic AI opponents, customizable se
 pip install -r requirements.txt
 ```
 
+Note: If you have a CUDA-capable GPU, PyTorch will automatically use it for AI calculations.
+
 ## Running the Game
 
 To start the game:
@@ -40,7 +44,7 @@ To start the game:
 To play against a trained model:
 
 ```bash
-./launch.sh model models/path/to/model.pkl
+./launch.sh model models/path/to/model.pth
 ```
 
 ### Training a New Model
@@ -55,8 +59,8 @@ Where `depth` is an optional parameter specifying the search depth (default: 3).
 
 The training process will:
 
-1. Generate all possible board positions
-2. Calculate the best moves for each position
+1. Generate training data from self-play
+2. Train a neural network using PyTorch
 3. Save the model to the `models` directory
 4. Create training logs in the `training_ai` directory
 
@@ -72,20 +76,34 @@ The training process will:
 
 - **Easy**: Makes random valid moves
 - **Medium**: Looks for winning moves and blocks opponent's winning moves
-- **Hard**: Uses minimax algorithm with alpha-beta pruning to find the best move
+- **Hard**: Uses a combination of neural network evaluation and minimax algorithm with alpha-beta pruning
+
+## AI Implementation
+
+The AI uses a hybrid approach combining:
+- Neural network for position evaluation and move prediction
+- Minimax algorithm with alpha-beta pruning for deep search
+- GPU acceleration when available
+- Multi-threaded CPU optimization for parallel move evaluation
+
+The neural network architecture includes:
+- Convolutional layers for pattern recognition
+- Fully connected layers for move prediction
+- Automatic GPU utilization when available
+- Fallback to CPU-only mode when GPU is not available
 
 ## Development Mode
 
 Press 'D' to toggle development mode, which shows:
-
 - AI's current calculation board
 - Move evaluations
 - Best move selection process
+- Neural network predictions
 
 ## Project Structure
 
 - `main.py`: Main game logic and UI
-- `ai.py`: AI implementation with different difficulty levels
+- `ai.py`: AI implementation with neural network and minimax
 - `in_game_ai.md`: Technical documentation for the in-game AI
 - `train_ai.py`: AI training system
 - `AI_Training_Technical.md`: Technical documentation for AI training and models
@@ -98,7 +116,16 @@ Press 'D' to toggle development mode, which shows:
 - Python 3.6+
 - Pygame
 - NumPy
-- tqdm (for training progress)
+- PyTorch (with CUDA support optional)
+- torchvision
+
+## Performance Optimization
+
+The game automatically optimizes for your hardware:
+- Uses GPU acceleration when available
+- Utilizes multiple CPU cores for parallel processing
+- Adjusts AI search depth based on available resources
+- Maintains smooth gameplay regardless of hardware
 
 ## License
 

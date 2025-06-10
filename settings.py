@@ -1,5 +1,6 @@
 import json
 import os
+import torch
 
 class Settings:
     def __init__(self):
@@ -9,7 +10,9 @@ class Settings:
             "sfx_volume": 70,
             "player_colors": [(255, 0, 0), (255, 255, 0)],  # Red and Yellow
             "ai_difficulty": "MEDIUM",
-            "ai_thinking_time": 1.0  # seconds
+            "use_gpu": torch.cuda.is_available(),  # Auto-detect GPU
+            "cpu_threads": max(1, os.cpu_count() // 2),  # Use half of available CPU cores by default
+            "dev_mode": False  # Mode développeur pour les logs détaillés
         }
         self.current_settings = self.load_settings()
 
@@ -20,6 +23,8 @@ class Settings:
                     settings = json.load(f)
                     # Convert color tuples from lists back to tuples
                     settings['player_colors'] = [tuple(color) for color in settings['player_colors']]
+                    # Ensure GPU setting is up to date
+                    settings['use_gpu'] = torch.cuda.is_available() and settings.get('use_gpu', False)
                     return settings
             except:
                 return self.default_settings.copy()
@@ -53,5 +58,11 @@ class Settings:
     def get_ai_difficulty(self):
         return self.current_settings['ai_difficulty']
 
-    def get_ai_thinking_time(self):
-        return self.current_settings['ai_thinking_time']
+    def is_dev_mode(self):
+        return self.current_settings.get('dev_mode', False)
+
+    def get_use_gpu(self):
+        return self.current_settings.get('use_gpu', False)
+
+    def get_cpu_threads(self):
+        return self.current_settings.get('cpu_threads', max(1, os.cpu_count() // 2))

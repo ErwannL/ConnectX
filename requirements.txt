@@ -1,3 +1,4 @@
 pygame==2.5.2
 numpy==1.26.4
-# Place your music.mp3 and drop.wav in an assets/ folder 
+torch==2.2.0
+torchvision==0.17.0
