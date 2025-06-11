@@ -13,7 +13,7 @@
             0
         ]
     ],
-    "ai_difficulty": "HARD",
+    "ai_difficulty": "EASY",
     "use_gpu": false,
     "cpu_threads": 4,
     "dev_mode": false

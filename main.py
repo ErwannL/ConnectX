@@ -518,7 +518,6 @@ class Game:
             instructions = [
                 "Click on a column to drop your piece",
                 "Press F to toggle fullscreen",
-                "Press S for windowed mode",
                 "Press ESC to return to menu"
             ]
             y_pos = 60
@@ -684,8 +683,6 @@ class Game:
                 return True
             elif event.key == pygame.K_f:
                 self.toggle_fullscreen()
-            elif event.key == pygame.K_s:
-                self.toggle_fullscreen(force_windowed=True)
         
         changed = False
         if self.music_slider.handle_event(event):
@@ -726,8 +723,6 @@ class Game:
                 return True
             elif event.key == pygame.K_f:
                 self.toggle_fullscreen()
-            elif event.key == pygame.K_s:
-                self.toggle_fullscreen(force_windowed=True)
         
         if self.ai_checkbox_list.handle_event(event):
             self.vs_ai = self.ai_checkbox_list.selected_index == 1
@@ -793,8 +788,6 @@ class Game:
                 return True
             elif event.key == pygame.K_f:
                 self.toggle_fullscreen()
-            elif event.key == pygame.K_s:
-                self.toggle_fullscreen(force_windowed=True)
         
         for button_name, button in self.menu_buttons.items():
             if button.handle_event(event):
@@ -870,8 +863,6 @@ class Game:
                 return True
             elif event.key == pygame.K_f:
                 self.toggle_fullscreen()
-            elif event.key == pygame.K_s:
-                self.toggle_fullscreen(force_windowed=True)
         
         # Handle end popup button if game is over
         if self.show_end_popup:
@@ -886,22 +877,26 @@ class Game:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 # Get mouse position
                 posx = event.pos[0]
-                # Convert to column
-                col = int(posx // SQUARE_SIZE)
+                # Convert to column, taking into account board position
+                col = int((posx - self.board_x) // SQUARE_SIZE)
                 
-                # Only allow human moves when it's human's turn
-                if self.vs_ai and self.current_player != self.human_piece:
-                    if self.debug_mode:
-                        self.logger.debug(f"Ignoring human click - AI's turn. Current player: {self.current_player}")
-                    return True
-                
-                if self.is_valid_location(self.board, col):
-                    row = self.get_next_open_row(self.board, col)
-                    self.animate_drop(col, row, self.current_player)
-                    self.game_logger.log_player_move(col, self.current_player)
-                    self.game_logger.log_board_state(self.board, 3 - self.current_player)  # Log board after player move
-                    if self.debug_mode:
-                        self.logger.debug(f"Mouse click at position {posx}, converted to column {col}")
+                # Validate column is within bounds
+                if 0 <= col < BOARD_COLS:
+                    # Only allow human moves when it's human's turn
+                    if self.vs_ai and self.current_player != self.human_piece:
+                        if self.debug_mode:
+                            self.logger.debug(f"Ignoring human click - AI's turn. Current player: {self.current_player}")
+                        return True
+                    
+                    if self.is_valid_location(self.board, col):
+                        row = self.get_next_open_row(self.board, col)
+                        self.animate_drop(col, row, self.current_player)
+                        self.game_logger.log_player_move(col, self.current_player)
+                        self.game_logger.log_board_state(self.board, 3 - self.current_player)  # Log board after player move
+                        if self.debug_mode:
+                            self.logger.debug(f"Mouse click at position {posx}, converted to column {col}")
+                elif self.debug_mode:
+                    self.logger.debug(f"Click outside board bounds: {posx}, calculated column: {col}")
         
         return True
 
