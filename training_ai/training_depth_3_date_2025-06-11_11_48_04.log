@@ -1,0 +1,12 @@
+2025-06-11 11:48:04,329 - INFO - Training log initialized: training_ai\training_depth_3_date_2025-06-11_11_48_04.log
+2025-06-11 11:48:04,329 - INFO - Starting training with depth 3
+2025-06-11 11:48:04,329 - INFO - Generating all board positions for exactly 3 moves (7^3 potential combinations). This may take a while...
+2025-06-11 11:48:04,361 - INFO - Generated 238 unique board positions for depth 3.
+2025-06-11 11:48:04,361 - INFO - Total combinations/states to evaluate: 238
+2025-06-11 11:48:04,361 - INFO - Estimated training time: approximately 2 minutes for 238 combinations.
+2025-06-11 11:48:04,361 - INFO - AI evaluator initialized with max_depth: 3
+2025-06-11 11:48:04,362 - INFO - Using 12 worker threads for training (75% of 16 CPU cores)
+2025-06-11 11:49:55,024 - INFO - Finished evaluating 238 board-player combinations.
+2025-06-11 11:49:55,024 - INFO - Total unique board states stored in model: 238
+2025-06-11 11:49:55,036 - INFO - Model saved to models\model_depth_3_date_2025-06-11_11_49_55.pkl
+2025-06-11 11:49:55,037 - INFO - Training completed in 1 minute, 50 seconds

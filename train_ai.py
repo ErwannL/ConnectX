@@ -60,7 +60,7 @@ class AITrainer:
                     return
 
                 # If the game is already over at this state, stop generating further moves
-                ai_checker = AI("HARD") # Local instance for checking terminal states
+                ai_checker = AI("HARD", is_in_game=False) # Local instance for checking terminal states
                 ai_checker.max_depth = 1 # Only need win/draw check, not deep minimax
 
                 if ai_checker._check_win(current_board, current_player) or \
@@ -91,7 +91,7 @@ class AITrainer:
             all_states_to_train.append((initial_board.copy(), 1))
 
             # Use an AI instance for checking terminal states
-            ai_checker = AI("HARD")
+            ai_checker = AI("HARD", is_in_game=False)
             ai_checker.max_depth = 1 # Only need win/draw check, not deep minimax
 
             while queue:
@@ -130,13 +130,12 @@ class AITrainer:
 
     def _evaluate_position(self, board, player_to_move, ai_difficulty, ai_max_depth):
         """Helper function to evaluate a single board position in a separate thread"""
-        ai = AI(ai_difficulty) # Create a new AI instance for each thread
+        ai = AI(ai_difficulty, is_in_game=False)  # Create a new AI instance for each thread without game mode
         ai.max_depth = ai_max_depth
         
         # Ensure AI's internal state is clean for each evaluation
         ai.calculated_move = None
         ai.is_thinking = False
-        ai.thinking_event.clear()
 
         best_move = ai.get_move(board.copy(), player_to_move)
         return board, player_to_move, best_move
@@ -193,15 +192,12 @@ class AITrainer:
 
         trained_count = 0
         # Use ThreadPoolExecutor for multithreaded training
-        max_workers = os.cpu_count()
-        if max_workers is not None:
-            max_workers = max(1, int(max_workers * 0.75)) # Use 75% of CPU cores, minimum 1
-        else:
-            max_workers = 1 # Fallback if os.cpu_count() returns None
-        logging.info(f"Using {max_workers} worker threads for training.")
+        cpu_count = os.cpu_count() or 4  # Fallback to 4 if cpu_count() returns None
+        max_workers = max(1, int(cpu_count * 0.75))  # Use 75% of available CPU cores
+        logging.info(f"Using {max_workers} worker threads for training (75% of {cpu_count} CPU cores)")
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # Submit tasks to the executor
+            # Submit all tasks at once for maximum parallelization
             future_to_board_player = {
                 executor.submit(self._evaluate_position, board, player_to_move, ai_difficulty, ai_max_depth_for_eval):
                 (board, player_to_move)
@@ -209,7 +205,9 @@ class AITrainer:
             }
             
             # Process results as they complete
-            for future in tqdm(concurrent.futures.as_completed(future_to_board_player), total=total_combinations, desc="Training positions"):
+            for future in tqdm(concurrent.futures.as_completed(future_to_board_player), 
+                             total=total_combinations, 
+                             desc="Training positions"):
                 board, player_to_move = future_to_board_player[future]
                 try:
                     board_result, player_result, best_move = future.result()
