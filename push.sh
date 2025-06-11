@@ -28,6 +28,14 @@ if is_positive "$clean_logs"; then
     echo "Logs directory cleaned."
 fi
 
+# Ask about cleaning checkpoints
+read -p "Do you want to clean the checkpoints directory? (yes/no): " clean_checkpoints
+if is_positive "$clean_checkpoints"; then
+    echo "Cleaning checkpoints directory..."
+    rm -rf checkpoints/
+    echo "Checkpoints directory cleaned."
+fi
+
 # Ask about cleaning models
 read -p "Do you want to clean the models directory (keeping only the most recent per depth)? (yes/no): " clean_models
 if is_positive "$clean_models"; then

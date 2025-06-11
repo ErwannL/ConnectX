@@ -8,10 +8,10 @@ echo "Starting ConnectX..."
 if [ "$1" = "train" ]; then
     if [ -n "$2" ]; then
         echo "Starting AI training with depth $2..."
-        python train_ai.py train $2
+        python train_ai.py $2
     else
         echo "Starting AI training with default depth..."
-        python train_ai.py train
+        python train_ai.py
     fi
 elif [ "$1" = "model" ]; then
     if [ -n "$2" ]; then

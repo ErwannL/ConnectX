@@ -2,3 +2,4 @@ pygame==2.5.2
 numpy==1.26.4
 torch==2.2.0
 torchvision==0.17.0
+keyboard==0.13.5

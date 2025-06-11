@@ -1,0 +1,15 @@
+2025-06-11 16:37:40,585 - INFO - Training log initialized: training_ai\training_depth_4_date_2025-06-11_16_37_40.log
+2025-06-11 16:37:40,674 - INFO - Starting new training with depth 4
+2025-06-11 16:37:40,674 - INFO - Generating all board positions for exactly 4 moves (7^4 potential combinations). This may take a while...
+2025-06-11 16:37:40,747 - INFO - Generated 1120 unique board positions for depth 4.
+2025-06-11 16:37:40,747 - INFO - Total combinations/states to evaluate: 1120
+2025-06-11 16:37:40,748 - INFO - AI evaluator initialized with max_depth: 4
+2025-06-11 16:37:40,749 - INFO - Using 12 worker threads for training (75% of 16 CPU cores)
+2025-06-11 16:39:06,486 - INFO - Training paused. Press Ctrl+Space to resume or Ctrl+C to stop completely.
+2025-06-11 16:39:07,122 - INFO - Checkpoint saved to checkpoints\checkpoint_depth_4_2025-06-11_16_39_06.pkl
+2025-06-11 16:39:11,210 - INFO - Resuming training...
+2025-06-11 16:42:24,690 - INFO - Training paused. Press Ctrl+Space to resume or Ctrl+C to stop completely.
+2025-06-11 16:42:26,387 - INFO - Checkpoint saved to checkpoints\checkpoint_depth_4_2025-06-11_16_39_06.pkl
+2025-06-11 16:42:33,257 - INFO - Resuming training...
+2025-06-11 16:43:02,048 - INFO - Model saved to models\model_depth_4_date_2025-06-11_16_43_01.pkl
+2025-06-11 16:43:02,048 - INFO - Training completed in 5 minutes, 8 seconds (+ 13 seconds of pause time)

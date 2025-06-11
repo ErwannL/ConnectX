@@ -22,7 +22,6 @@ wheels/
 
 # Logs
 logs/
-ai_logs/
 
 # Environment
 .env
@@ -47,6 +46,8 @@ Thumbs.db
 *.pywz
 *.pyzw
 *.pyzwz
+
+checkpoints/
 
 # Game specific
 # training_ai/ and models/ are now tracked
