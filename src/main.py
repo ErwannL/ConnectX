@@ -11,10 +11,6 @@ from ai import AI
 import time
 from logging_config import GameLogger, setup_logging
 
-# Setup logging
-# setup_logging()  # Supprimé car sera appelé dans main() avec le bon mode
-# DEV_MODE = True  # Supprimé car sera géré par setup_logging
-
 # Disable pygame's logging
 logging.getLogger('pygame').setLevel(logging.WARNING)
 
@@ -22,7 +18,7 @@ logging.getLogger('pygame').setLevel(logging.WARNING)
 logging.getLogger('ai').setLevel(logging.WARNING)
 
 # Asset paths
-ASSETS_DIR = "assets"
+ASSETS_DIR = os.path.join("src", "assets")
 MUSIC_FILE = os.path.join(ASSETS_DIR, "music.mp3")
 DROP_SFX_FILE = os.path.join(ASSETS_DIR, "drop.mp3")
 
@@ -74,7 +70,7 @@ YELLOW = (255, 255, 0)
 GRAY = (128, 128, 128)
 GREEN = (0, 255, 0)
 CYAN = (0, 255, 255)
-DARK_RED = (200, 0, 0)
+DARK_RED = (100, 0, 0)
 DARK_YELLOW = (200, 200, 0)
 DARK_GRAY = (64, 64, 64)
 LIGHT_GRAY = (192, 192, 192)

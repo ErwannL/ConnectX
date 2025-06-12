@@ -94,7 +94,7 @@ class AITrainer:
         if not self.checkpoint_file:
             timestamp = datetime.now().strftime("%Y-%m-%d_%H_%M_%S")
             depth_str = f"depth_{self.depth}" if self.depth is not None else "full_game"
-            self.checkpoint_file = os.path.join("checkpoints", f"checkpoint_{depth_str}_{timestamp}.pkl")
+            self.checkpoint_file = os.path.join("ai", "models_checkpoints", f"checkpoint_{depth_str}_{timestamp}.pkl")
         
         # If we're paused, add the current pause time to total
         current_pause_time = 0
@@ -111,7 +111,7 @@ class AITrainer:
             'total_pause_time': self.total_pause_time + current_pause_time  # Include current pause time
         }
         
-        os.makedirs("checkpoints", exist_ok=True)
+        os.makedirs(os.path.join("ai", "models_checkpoints"), exist_ok=True)
         with open(self.checkpoint_file, 'wb') as f:
             pickle.dump(checkpoint_data, f)
         logging.info(f"Checkpoint saved to {self.checkpoint_file}")
@@ -139,7 +139,7 @@ class AITrainer:
             return False
 
     def setup_logging(self):
-        log_dir = "training_ai"
+        log_dir = "ai/models_log"
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)
         timestamp = datetime.now().strftime("%Y-%m-%d_%H_%M_%S")
@@ -361,7 +361,7 @@ class AITrainer:
 
     def save_model(self):
         """Save the trained model"""
-        model_dir = "models"
+        model_dir = "ai/models"
         if not os.path.exists(model_dir):
             os.makedirs(model_dir)
         

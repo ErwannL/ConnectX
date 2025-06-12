@@ -1,6 +1,6 @@
 # AI Training Technical Documentation
 
-[← Back to README](Readme.md)
+[← Back to README](../Readme.md)
 
 ## Overview
 

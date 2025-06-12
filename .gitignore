@@ -38,6 +38,7 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Python bytecode
 *.pyc
 *.pyo
 *.pyd
@@ -47,8 +48,9 @@ Thumbs.db
 *.pyzw
 *.pyzwz
 
-checkpoints/
+# AI checkpoints
+ai/models_checkpoints/
 
 # Game specific
-# training_ai/ and models/ are now tracked
-# *.pkl is now tracked
+# ai/models/ and ai/models_log/ are tracked
+# *.pkl files are tracked

@@ -132,9 +132,9 @@ Training controls:
 
 ### AI Implementation
 For detailed technical information about:
-- In-game AI: See [in_game_ai.md](in_game_ai.md)
-- AI Training: See [AI_Training_Technical.md](AI_Training_Technical.md)
+- In-game AI: See [in_game_ai.md](documentation/in_game_ai.md)
+- AI Training: See [AI_Training_Technical.md](documentation/AI_Training_Technical.md)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](documentation/LICENSE) file for details.

@@ -53,7 +53,7 @@ class AI:
         if is_in_game:
             try:
                 # Chercher le modèle avec la plus grande profondeur dans le dossier models
-                model_dir = "models"
+                model_dir = "ai/models"
                 if os.path.exists(model_dir):
                     model_files = [f for f in os.listdir(model_dir) if f.endswith('.pkl')]
                     if model_files:

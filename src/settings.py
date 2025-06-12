@@ -4,7 +4,7 @@ import torch
 
 class Settings:
     def __init__(self):
-        self.settings_file = "game_settings.json"
+        self.settings_file = os.path.join("src", "game_settings.json")
         self.default_settings = {
             "music_volume": 70,
             "sfx_volume": 70,
@@ -12,7 +12,7 @@ class Settings:
             "ai_difficulty": "MEDIUM",
             "use_gpu": torch.cuda.is_available(),  # Auto-detect GPU
             "cpu_threads": max(1, os.cpu_count() // 2),  # Use half of available CPU cores by default
-            "dev_mode": False  # Mode développeur pour les logs détaillés
+            "dev_mode": False  # Developer mode for detailed logs
         }
         self.current_settings = self.load_settings()
 

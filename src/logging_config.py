@@ -211,7 +211,7 @@ class TrainingLogger:
         self.logger.setLevel(logging.INFO)
         
         # Créer le dossier training_ai s'il n'existe pas
-        self.log_dir = Path('training_ai')
+        self.log_dir = Path('ai/models_log')
         self.log_dir.mkdir(exist_ok=True)
         
         # Format du nom de fichier
