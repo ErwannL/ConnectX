@@ -1,0 +1,1500 @@
+2025-06-17 17:55:29,241 - INFO - Training log initialized: ai/models_log\training_depth_8_date_2025-06-17_17_55_29.log
+2025-06-17 17:55:29,342 - INFO - Starting new training with depth 8
+2025-06-17 17:55:29,343 - INFO - Generating all board positions for exactly 8 moves (7^8 potential combinations). This may take a while...
+2025-06-17 17:55:40,981 - INFO - Generated 185034 unique board positions for depth 8.
+2025-06-17 17:55:40,981 - INFO - Total combinations/states to evaluate: 185034
+2025-06-17 17:55:40,981 - INFO - AI evaluator initialized with max_depth: 8 (using training depth)
+2025-06-17 17:55:40,981 - INFO - Using 12 worker threads for training (75% of 16 CPU cores)
+2025-06-17 18:04:26,373 - WARNING - No valid moves available!
+2025-06-17 18:04:26,379 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:26,384 - ERROR - No valid moves available!
+2025-06-17 18:04:26,385 - WARNING - No valid moves available!
+2025-06-17 18:04:26,395 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:26,398 - ERROR - No valid moves available!
+2025-06-17 18:04:26,424 - WARNING - No valid moves available!
+2025-06-17 18:04:26,431 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:26,436 - ERROR - No valid moves available!
+2025-06-17 18:04:26,958 - WARNING - No valid moves available!
+2025-06-17 18:04:26,970 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:26,972 - ERROR - No valid moves available!
+2025-06-17 18:04:26,986 - WARNING - No valid moves available!
+2025-06-17 18:04:27,001 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:27,009 - ERROR - No valid moves available!
+2025-06-17 18:04:27,809 - WARNING - No valid moves available!
+2025-06-17 18:04:27,815 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:27,821 - ERROR - No valid moves available!
+2025-06-17 18:04:35,127 - WARNING - No valid moves available!
+2025-06-17 18:04:35,133 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:35,139 - ERROR - No valid moves available!
+2025-06-17 18:04:35,146 - WARNING - No valid moves available!
+2025-06-17 18:04:35,147 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:35,147 - ERROR - No valid moves available!
+2025-06-17 18:04:35,180 - WARNING - No valid moves available!
+2025-06-17 18:04:35,185 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:04:35,197 - ERROR - No valid moves available!
+2025-06-17 18:06:28,331 - WARNING - No valid moves available!
+2025-06-17 18:06:28,332 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:06:28,333 - ERROR - No valid moves available!
+2025-06-17 18:06:28,333 - WARNING - No valid moves available!
+2025-06-17 18:06:28,335 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:06:28,341 - ERROR - No valid moves available!
+2025-06-17 18:06:28,358 - WARNING - No valid moves available!
+2025-06-17 18:06:28,385 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:06:28,387 - ERROR - No valid moves available!
+2025-06-17 18:06:29,272 - WARNING - No valid moves available!
+2025-06-17 18:06:29,282 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:06:29,283 - ERROR - No valid moves available!
+2025-06-17 18:06:29,295 - WARNING - No valid moves available!
+2025-06-17 18:06:29,295 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:06:29,297 - ERROR - No valid moves available!
+2025-06-17 18:06:30,469 - WARNING - No valid moves available!
+2025-06-17 18:06:30,475 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:06:30,480 - ERROR - No valid moves available!
+2025-06-17 18:08:53,779 - WARNING - No valid moves available!
+2025-06-17 18:08:53,791 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:08:53,792 - ERROR - No valid moves available!
+2025-06-17 18:08:53,794 - WARNING - No valid moves available!
+2025-06-17 18:08:53,798 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:08:53,809 - ERROR - No valid moves available!
+2025-06-17 18:08:55,204 - WARNING - No valid moves available!
+2025-06-17 18:08:55,209 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:08:55,213 - ERROR - No valid moves available!
+2025-06-17 18:11:05,109 - WARNING - No valid moves available!
+2025-06-17 18:11:05,123 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:11:05,123 - ERROR - No valid moves available!
+2025-06-17 18:17:59,304 - WARNING - No valid moves available!
+2025-06-17 18:17:59,316 - WARNING - No valid moves available!
+2025-06-17 18:17:59,321 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:17:59,328 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:17:59,328 - ERROR - No valid moves available!
+2025-06-17 18:17:59,329 - ERROR - No valid moves available!
+2025-06-17 18:17:59,330 - WARNING - No valid moves available!
+2025-06-17 18:17:59,330 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:17:59,331 - ERROR - No valid moves available!
+2025-06-17 18:17:59,841 - WARNING - No valid moves available!
+2025-06-17 18:17:59,842 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:17:59,847 - ERROR - No valid moves available!
+2025-06-17 18:17:59,856 - WARNING - No valid moves available!
+2025-06-17 18:17:59,863 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:17:59,865 - ERROR - No valid moves available!
+2025-06-17 18:18:00,694 - WARNING - No valid moves available!
+2025-06-17 18:18:00,724 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:18:00,743 - ERROR - No valid moves available!
+2025-06-17 18:18:13,267 - WARNING - No valid moves available!
+2025-06-17 18:18:13,268 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:18:13,269 - ERROR - No valid moves available!
+2025-06-17 18:18:13,269 - WARNING - No valid moves available!
+2025-06-17 18:18:13,271 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:18:13,272 - ERROR - No valid moves available!
+2025-06-17 18:18:13,295 - WARNING - No valid moves available!
+2025-06-17 18:18:13,296 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:18:13,297 - ERROR - No valid moves available!
+2025-06-17 18:18:29,696 - WARNING - No valid moves available!
+2025-06-17 18:18:29,719 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:18:29,729 - ERROR - No valid moves available!
+2025-06-17 18:20:03,208 - WARNING - No valid moves available!
+2025-06-17 18:20:03,208 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:03,209 - ERROR - No valid moves available!
+2025-06-17 18:20:03,215 - WARNING - No valid moves available!
+2025-06-17 18:20:03,226 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:03,226 - ERROR - No valid moves available!
+2025-06-17 18:20:03,245 - WARNING - No valid moves available!
+2025-06-17 18:20:03,246 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:03,251 - ERROR - No valid moves available!
+2025-06-17 18:20:03,766 - WARNING - No valid moves available!
+2025-06-17 18:20:03,769 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:03,769 - ERROR - No valid moves available!
+2025-06-17 18:20:03,774 - WARNING - No valid moves available!
+2025-06-17 18:20:03,781 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:03,781 - ERROR - No valid moves available!
+2025-06-17 18:20:04,489 - WARNING - No valid moves available!
+2025-06-17 18:20:04,493 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:04,499 - ERROR - No valid moves available!
+2025-06-17 18:20:11,421 - WARNING - No valid moves available!
+2025-06-17 18:20:11,428 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:11,432 - ERROR - No valid moves available!
+2025-06-17 18:20:11,434 - WARNING - No valid moves available!
+2025-06-17 18:20:11,454 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:11,461 - ERROR - No valid moves available!
+2025-06-17 18:20:11,466 - WARNING - No valid moves available!
+2025-06-17 18:20:11,466 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:11,471 - ERROR - No valid moves available!
+2025-06-17 18:20:22,991 - WARNING - No valid moves available!
+2025-06-17 18:20:22,999 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:23,024 - ERROR - No valid moves available!
+2025-06-17 18:20:58,856 - WARNING - No valid moves available!
+2025-06-17 18:20:58,857 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:58,857 - ERROR - No valid moves available!
+2025-06-17 18:20:58,863 - WARNING - No valid moves available!
+2025-06-17 18:20:58,863 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:58,872 - ERROR - No valid moves available!
+2025-06-17 18:20:58,906 - WARNING - No valid moves available!
+2025-06-17 18:20:58,907 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:58,908 - ERROR - No valid moves available!
+2025-06-17 18:20:59,755 - WARNING - No valid moves available!
+2025-06-17 18:20:59,757 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:59,757 - ERROR - No valid moves available!
+2025-06-17 18:20:59,768 - WARNING - No valid moves available!
+2025-06-17 18:20:59,768 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:20:59,769 - ERROR - No valid moves available!
+2025-06-17 18:21:00,906 - WARNING - No valid moves available!
+2025-06-17 18:21:00,912 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:00,916 - ERROR - No valid moves available!
+2025-06-17 18:21:09,067 - WARNING - No valid moves available!
+2025-06-17 18:21:09,068 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:09,069 - ERROR - No valid moves available!
+2025-06-17 18:21:09,069 - WARNING - No valid moves available!
+2025-06-17 18:21:09,075 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:09,081 - ERROR - No valid moves available!
+2025-06-17 18:21:09,099 - WARNING - No valid moves available!
+2025-06-17 18:21:09,110 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:09,111 - ERROR - No valid moves available!
+2025-06-17 18:21:09,608 - WARNING - No valid moves available!
+2025-06-17 18:21:09,628 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:09,628 - WARNING - No valid moves available!
+2025-06-17 18:21:09,634 - ERROR - No valid moves available!
+2025-06-17 18:21:09,635 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:09,638 - ERROR - No valid moves available!
+2025-06-17 18:21:10,410 - WARNING - No valid moves available!
+2025-06-17 18:21:10,416 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:10,421 - ERROR - No valid moves available!
+2025-06-17 18:21:12,555 - WARNING - No valid moves available!
+2025-06-17 18:21:12,561 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:12,562 - ERROR - No valid moves available!
+2025-06-17 18:21:12,568 - WARNING - No valid moves available!
+2025-06-17 18:21:12,575 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:12,575 - ERROR - No valid moves available!
+2025-06-17 18:21:12,608 - WARNING - No valid moves available!
+2025-06-17 18:21:12,619 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:12,625 - ERROR - No valid moves available!
+2025-06-17 18:21:13,437 - WARNING - No valid moves available!
+2025-06-17 18:21:13,448 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,449 - ERROR - No valid moves available!
+2025-06-17 18:21:13,449 - WARNING - No valid moves available!
+2025-06-17 18:21:13,456 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,457 - ERROR - No valid moves available!
+2025-06-17 18:21:13,472 - WARNING - No valid moves available!
+2025-06-17 18:21:13,481 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,488 - ERROR - No valid moves available!
+2025-06-17 18:21:13,663 - WARNING - No valid moves available!
+2025-06-17 18:21:13,666 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,666 - ERROR - No valid moves available!
+2025-06-17 18:21:13,667 - WARNING - No valid moves available!
+2025-06-17 18:21:13,672 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,678 - ERROR - No valid moves available!
+2025-06-17 18:21:13,715 - WARNING - No valid moves available!
+2025-06-17 18:21:13,724 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,735 - ERROR - No valid moves available!
+2025-06-17 18:21:13,735 - WARNING - No valid moves available!
+2025-06-17 18:21:13,736 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,737 - ERROR - No valid moves available!
+2025-06-17 18:21:13,737 - WARNING - No valid moves available!
+2025-06-17 18:21:13,753 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,754 - ERROR - No valid moves available!
+2025-06-17 18:21:13,757 - WARNING - No valid moves available!
+2025-06-17 18:21:13,757 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,758 - ERROR - No valid moves available!
+2025-06-17 18:21:13,758 - WARNING - No valid moves available!
+2025-06-17 18:21:13,772 - WARNING - No valid moves available!
+2025-06-17 18:21:13,775 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,780 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,781 - ERROR - No valid moves available!
+2025-06-17 18:21:13,781 - ERROR - No valid moves available!
+2025-06-17 18:21:13,782 - WARNING - No valid moves available!
+2025-06-17 18:21:13,785 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,785 - ERROR - No valid moves available!
+2025-06-17 18:21:13,820 - WARNING - No valid moves available!
+2025-06-17 18:21:13,828 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,829 - ERROR - No valid moves available!
+2025-06-17 18:21:13,845 - WARNING - No valid moves available!
+2025-06-17 18:21:13,845 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,846 - ERROR - No valid moves available!
+2025-06-17 18:21:13,848 - WARNING - No valid moves available!
+2025-06-17 18:21:13,848 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,852 - ERROR - No valid moves available!
+2025-06-17 18:21:13,859 - WARNING - No valid moves available!
+2025-06-17 18:21:13,861 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,862 - ERROR - No valid moves available!
+2025-06-17 18:21:13,868 - WARNING - No valid moves available!
+2025-06-17 18:21:13,870 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,878 - ERROR - No valid moves available!
+2025-06-17 18:21:13,878 - WARNING - No valid moves available!
+2025-06-17 18:21:13,885 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,886 - ERROR - No valid moves available!
+2025-06-17 18:21:13,901 - WARNING - No valid moves available!
+2025-06-17 18:21:13,902 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,907 - ERROR - No valid moves available!
+2025-06-17 18:21:13,974 - WARNING - No valid moves available!
+2025-06-17 18:21:13,979 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,979 - ERROR - No valid moves available!
+2025-06-17 18:21:13,989 - WARNING - No valid moves available!
+2025-06-17 18:21:13,994 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:13,996 - ERROR - No valid moves available!
+2025-06-17 18:21:13,996 - WARNING - No valid moves available!
+2025-06-17 18:21:14,006 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:14,008 - ERROR - No valid moves available!
+2025-06-17 18:21:14,016 - WARNING - No valid moves available!
+2025-06-17 18:21:14,017 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:14,017 - ERROR - No valid moves available!
+2025-06-17 18:21:14,019 - WARNING - No valid moves available!
+2025-06-17 18:21:14,024 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:14,027 - ERROR - No valid moves available!
+2025-06-17 18:21:14,725 - WARNING - No valid moves available!
+2025-06-17 18:21:14,734 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:14,737 - ERROR - No valid moves available!
+2025-06-17 18:21:15,020 - WARNING - No valid moves available!
+2025-06-17 18:21:15,024 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,031 - ERROR - No valid moves available!
+2025-06-17 18:21:15,037 - WARNING - No valid moves available!
+2025-06-17 18:21:15,043 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,044 - ERROR - No valid moves available!
+2025-06-17 18:21:15,098 - WARNING - No valid moves available!
+2025-06-17 18:21:15,098 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,098 - ERROR - No valid moves available!
+2025-06-17 18:21:15,100 - WARNING - No valid moves available!
+2025-06-17 18:21:15,107 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,108 - ERROR - No valid moves available!
+2025-06-17 18:21:15,109 - WARNING - No valid moves available!
+2025-06-17 18:21:15,109 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,116 - ERROR - No valid moves available!
+2025-06-17 18:21:15,119 - WARNING - No valid moves available!
+2025-06-17 18:21:15,119 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,120 - ERROR - No valid moves available!
+2025-06-17 18:21:15,123 - WARNING - No valid moves available!
+2025-06-17 18:21:15,129 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,129 - WARNING - No valid moves available!
+2025-06-17 18:21:15,131 - ERROR - No valid moves available!
+2025-06-17 18:21:15,132 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,145 - WARNING - No valid moves available!
+2025-06-17 18:21:15,145 - ERROR - No valid moves available!
+2025-06-17 18:21:15,150 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,152 - ERROR - No valid moves available!
+2025-06-17 18:21:15,152 - WARNING - No valid moves available!
+2025-06-17 18:21:15,154 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,154 - ERROR - No valid moves available!
+2025-06-17 18:21:15,905 - WARNING - No valid moves available!
+2025-06-17 18:21:15,910 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,912 - ERROR - No valid moves available!
+2025-06-17 18:21:15,952 - WARNING - No valid moves available!
+2025-06-17 18:21:15,953 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:15,953 - ERROR - No valid moves available!
+2025-06-17 18:21:16,083 - WARNING - No valid moves available!
+2025-06-17 18:21:16,089 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:16,090 - ERROR - No valid moves available!
+2025-06-17 18:21:16,955 - WARNING - No valid moves available!
+2025-06-17 18:21:16,973 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:16,979 - ERROR - No valid moves available!
+2025-06-17 18:21:17,025 - WARNING - No valid moves available!
+2025-06-17 18:21:17,032 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:17,034 - ERROR - No valid moves available!
+2025-06-17 18:21:17,044 - WARNING - No valid moves available!
+2025-06-17 18:21:17,044 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:17,045 - ERROR - No valid moves available!
+2025-06-17 18:21:17,067 - WARNING - No valid moves available!
+2025-06-17 18:21:17,068 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:17,069 - ERROR - No valid moves available!
+2025-06-17 18:21:17,085 - WARNING - No valid moves available!
+2025-06-17 18:21:17,085 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:17,091 - ERROR - No valid moves available!
+2025-06-17 18:21:17,185 - WARNING - No valid moves available!
+2025-06-17 18:21:17,191 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:17,203 - ERROR - No valid moves available!
+2025-06-17 18:21:18,859 - WARNING - No valid moves available!
+2025-06-17 18:21:18,865 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:18,871 - WARNING - No valid moves available!
+2025-06-17 18:21:18,871 - ERROR - No valid moves available!
+2025-06-17 18:21:18,873 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:18,892 - ERROR - No valid moves available!
+2025-06-17 18:21:18,998 - WARNING - No valid moves available!
+2025-06-17 18:21:18,999 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:18,999 - ERROR - No valid moves available!
+2025-06-17 18:21:30,561 - WARNING - No valid moves available!
+2025-06-17 18:21:30,567 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:30,577 - ERROR - No valid moves available!
+2025-06-17 18:21:30,591 - WARNING - No valid moves available!
+2025-06-17 18:21:30,591 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:30,591 - ERROR - No valid moves available!
+2025-06-17 18:21:31,985 - WARNING - No valid moves available!
+2025-06-17 18:21:31,989 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:32,000 - ERROR - No valid moves available!
+2025-06-17 18:21:35,361 - WARNING - No valid moves available!
+2025-06-17 18:21:35,368 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:35,373 - ERROR - No valid moves available!
+2025-06-17 18:21:35,374 - WARNING - No valid moves available!
+2025-06-17 18:21:35,382 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:35,383 - ERROR - No valid moves available!
+2025-06-17 18:21:35,419 - WARNING - No valid moves available!
+2025-06-17 18:21:35,421 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:35,421 - ERROR - No valid moves available!
+2025-06-17 18:21:36,425 - WARNING - No valid moves available!
+2025-06-17 18:21:36,428 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,433 - ERROR - No valid moves available!
+2025-06-17 18:21:36,433 - WARNING - No valid moves available!
+2025-06-17 18:21:36,446 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,446 - ERROR - No valid moves available!
+2025-06-17 18:21:36,460 - WARNING - No valid moves available!
+2025-06-17 18:21:36,467 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,470 - ERROR - No valid moves available!
+2025-06-17 18:21:36,647 - WARNING - No valid moves available!
+2025-06-17 18:21:36,652 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,659 - ERROR - No valid moves available!
+2025-06-17 18:21:36,663 - WARNING - No valid moves available!
+2025-06-17 18:21:36,667 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,673 - ERROR - No valid moves available!
+2025-06-17 18:21:36,711 - WARNING - No valid moves available!
+2025-06-17 18:21:36,711 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,713 - ERROR - No valid moves available!
+2025-06-17 18:21:36,714 - WARNING - No valid moves available!
+2025-06-17 18:21:36,724 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,726 - ERROR - No valid moves available!
+2025-06-17 18:21:36,772 - WARNING - No valid moves available!
+2025-06-17 18:21:36,777 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,784 - ERROR - No valid moves available!
+2025-06-17 18:21:36,784 - WARNING - No valid moves available!
+2025-06-17 18:21:36,784 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,795 - ERROR - No valid moves available!
+2025-06-17 18:21:36,796 - WARNING - No valid moves available!
+2025-06-17 18:21:36,798 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,799 - ERROR - No valid moves available!
+2025-06-17 18:21:36,816 - WARNING - No valid moves available!
+2025-06-17 18:21:36,816 - WARNING - No valid moves available!
+2025-06-17 18:21:36,822 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,824 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,824 - ERROR - No valid moves available!
+2025-06-17 18:21:36,825 - WARNING - No valid moves available!
+2025-06-17 18:21:36,826 - ERROR - No valid moves available!
+2025-06-17 18:21:36,827 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,829 - WARNING - No valid moves available!
+2025-06-17 18:21:36,829 - ERROR - No valid moves available!
+2025-06-17 18:21:36,829 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,831 - ERROR - No valid moves available!
+2025-06-17 18:21:36,872 - WARNING - No valid moves available!
+2025-06-17 18:21:36,872 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,877 - ERROR - No valid moves available!
+2025-06-17 18:21:36,942 - WARNING - No valid moves available!
+2025-06-17 18:21:36,947 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,948 - ERROR - No valid moves available!
+2025-06-17 18:21:36,986 - WARNING - No valid moves available!
+2025-06-17 18:21:36,988 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,989 - ERROR - No valid moves available!
+2025-06-17 18:21:36,995 - WARNING - No valid moves available!
+2025-06-17 18:21:36,996 - WARNING - No valid moves available!
+2025-06-17 18:21:36,997 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:36,999 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,000 - ERROR - No valid moves available!
+2025-06-17 18:21:37,009 - WARNING - No valid moves available!
+2025-06-17 18:21:37,010 - ERROR - No valid moves available!
+2025-06-17 18:21:37,013 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,016 - ERROR - No valid moves available!
+2025-06-17 18:21:37,021 - WARNING - No valid moves available!
+2025-06-17 18:21:37,029 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,034 - ERROR - No valid moves available!
+2025-06-17 18:21:37,054 - WARNING - No valid moves available!
+2025-06-17 18:21:37,054 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,055 - ERROR - No valid moves available!
+2025-06-17 18:21:37,188 - WARNING - No valid moves available!
+2025-06-17 18:21:37,193 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,198 - ERROR - No valid moves available!
+2025-06-17 18:21:37,199 - WARNING - No valid moves available!
+2025-06-17 18:21:37,210 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,211 - ERROR - No valid moves available!
+2025-06-17 18:21:37,212 - WARNING - No valid moves available!
+2025-06-17 18:21:37,226 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,228 - ERROR - No valid moves available!
+2025-06-17 18:21:37,231 - WARNING - No valid moves available!
+2025-06-17 18:21:37,232 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,232 - ERROR - No valid moves available!
+2025-06-17 18:21:37,234 - WARNING - No valid moves available!
+2025-06-17 18:21:37,235 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:37,243 - ERROR - No valid moves available!
+2025-06-17 18:21:48,802 - WARNING - No valid moves available!
+2025-06-17 18:21:48,802 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:48,802 - ERROR - No valid moves available!
+2025-06-17 18:21:50,037 - WARNING - No valid moves available!
+2025-06-17 18:21:50,043 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:50,052 - ERROR - No valid moves available!
+2025-06-17 18:21:51,877 - WARNING - No valid moves available!
+2025-06-17 18:21:51,878 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:21:51,879 - ERROR - No valid moves available!
+2025-06-17 18:22:02,743 - WARNING - No valid moves available!
+2025-06-17 18:22:02,744 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:02,749 - ERROR - No valid moves available!
+2025-06-17 18:22:05,477 - WARNING - No valid moves available!
+2025-06-17 18:22:05,478 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:05,479 - ERROR - No valid moves available!
+2025-06-17 18:22:05,485 - WARNING - No valid moves available!
+2025-06-17 18:22:05,492 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:05,510 - ERROR - No valid moves available!
+2025-06-17 18:22:06,405 - WARNING - No valid moves available!
+2025-06-17 18:22:06,405 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:06,406 - ERROR - No valid moves available!
+2025-06-17 18:22:06,408 - WARNING - No valid moves available!
+2025-06-17 18:22:06,408 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:06,420 - ERROR - No valid moves available!
+2025-06-17 18:22:06,911 - WARNING - No valid moves available!
+2025-06-17 18:22:06,921 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:06,921 - ERROR - No valid moves available!
+2025-06-17 18:22:06,945 - WARNING - No valid moves available!
+2025-06-17 18:22:06,955 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:06,956 - ERROR - No valid moves available!
+2025-06-17 18:22:06,958 - WARNING - No valid moves available!
+2025-06-17 18:22:06,959 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:06,960 - ERROR - No valid moves available!
+2025-06-17 18:22:06,960 - WARNING - No valid moves available!
+2025-06-17 18:22:06,963 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:06,965 - ERROR - No valid moves available!
+2025-06-17 18:22:06,978 - WARNING - No valid moves available!
+2025-06-17 18:22:06,978 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:06,979 - ERROR - No valid moves available!
+2025-06-17 18:22:07,025 - WARNING - No valid moves available!
+2025-06-17 18:22:07,030 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:07,046 - ERROR - No valid moves available!
+2025-06-17 18:22:07,077 - WARNING - No valid moves available!
+2025-06-17 18:22:07,082 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:07,087 - ERROR - No valid moves available!
+2025-06-17 18:22:07,161 - WARNING - No valid moves available!
+2025-06-17 18:22:07,167 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:07,171 - ERROR - No valid moves available!
+2025-06-17 18:22:07,173 - WARNING - No valid moves available!
+2025-06-17 18:22:07,174 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:07,184 - ERROR - No valid moves available!
+2025-06-17 18:22:07,204 - WARNING - No valid moves available!
+2025-06-17 18:22:07,205 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:07,206 - ERROR - No valid moves available!
+2025-06-17 18:22:07,233 - WARNING - No valid moves available!
+2025-06-17 18:22:07,245 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:07,250 - ERROR - No valid moves available!
+2025-06-17 18:22:09,452 - WARNING - No valid moves available!
+2025-06-17 18:22:09,452 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:09,454 - ERROR - No valid moves available!
+2025-06-17 18:22:32,170 - WARNING - No valid moves available!
+2025-06-17 18:22:32,171 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:32,176 - ERROR - No valid moves available!
+2025-06-17 18:22:32,975 - WARNING - No valid moves available!
+2025-06-17 18:22:32,980 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:32,987 - ERROR - No valid moves available!
+2025-06-17 18:22:33,529 - WARNING - No valid moves available!
+2025-06-17 18:22:33,544 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:33,551 - ERROR - No valid moves available!
+2025-06-17 18:22:33,552 - WARNING - No valid moves available!
+2025-06-17 18:22:33,553 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:33,553 - ERROR - No valid moves available!
+2025-06-17 18:22:33,562 - WARNING - No valid moves available!
+2025-06-17 18:22:33,574 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:22:33,575 - ERROR - No valid moves available!
+2025-06-17 18:25:14,463 - WARNING - No valid moves available!
+2025-06-17 18:25:14,465 - WARNING - No valid moves available!
+2025-06-17 18:25:14,475 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:25:14,486 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:25:14,500 - ERROR - No valid moves available!
+2025-06-17 18:25:14,501 - ERROR - No valid moves available!
+2025-06-17 18:25:14,546 - WARNING - No valid moves available!
+2025-06-17 18:25:14,547 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:25:14,547 - ERROR - No valid moves available!
+2025-06-17 18:25:32,480 - WARNING - No valid moves available!
+2025-06-17 18:25:32,481 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:25:32,485 - ERROR - No valid moves available!
+2025-06-17 18:26:25,944 - WARNING - No valid moves available!
+2025-06-17 18:26:25,950 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:25,956 - ERROR - No valid moves available!
+2025-06-17 18:26:25,957 - WARNING - No valid moves available!
+2025-06-17 18:26:25,963 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:25,963 - ERROR - No valid moves available!
+2025-06-17 18:26:25,986 - WARNING - No valid moves available!
+2025-06-17 18:26:25,991 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:26,004 - ERROR - No valid moves available!
+2025-06-17 18:26:26,866 - WARNING - No valid moves available!
+2025-06-17 18:26:26,872 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:26,883 - ERROR - No valid moves available!
+2025-06-17 18:26:26,895 - WARNING - No valid moves available!
+2025-06-17 18:26:26,902 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:26,904 - ERROR - No valid moves available!
+2025-06-17 18:26:28,126 - WARNING - No valid moves available!
+2025-06-17 18:26:28,129 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:28,141 - ERROR - No valid moves available!
+2025-06-17 18:26:38,787 - WARNING - No valid moves available!
+2025-06-17 18:26:38,792 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:38,799 - ERROR - No valid moves available!
+2025-06-17 18:26:38,802 - WARNING - No valid moves available!
+2025-06-17 18:26:38,802 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:38,807 - ERROR - No valid moves available!
+2025-06-17 18:26:38,824 - WARNING - No valid moves available!
+2025-06-17 18:26:38,831 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:38,837 - ERROR - No valid moves available!
+2025-06-17 18:26:39,320 - WARNING - No valid moves available!
+2025-06-17 18:26:39,333 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:39,334 - ERROR - No valid moves available!
+2025-06-17 18:26:39,336 - WARNING - No valid moves available!
+2025-06-17 18:26:39,337 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:39,355 - ERROR - No valid moves available!
+2025-06-17 18:26:40,129 - WARNING - No valid moves available!
+2025-06-17 18:26:40,134 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:40,139 - ERROR - No valid moves available!
+2025-06-17 18:26:42,533 - WARNING - No valid moves available!
+2025-06-17 18:26:42,545 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:42,545 - ERROR - No valid moves available!
+2025-06-17 18:26:42,546 - WARNING - No valid moves available!
+2025-06-17 18:26:42,546 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:42,555 - ERROR - No valid moves available!
+2025-06-17 18:26:42,604 - WARNING - No valid moves available!
+2025-06-17 18:26:42,605 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:42,609 - ERROR - No valid moves available!
+2025-06-17 18:26:43,611 - WARNING - No valid moves available!
+2025-06-17 18:26:43,621 - WARNING - No valid moves available!
+2025-06-17 18:26:43,621 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:43,626 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:43,628 - ERROR - No valid moves available!
+2025-06-17 18:26:43,628 - ERROR - No valid moves available!
+2025-06-17 18:26:43,662 - WARNING - No valid moves available!
+2025-06-17 18:26:43,677 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:43,677 - ERROR - No valid moves available!
+2025-06-17 18:26:44,524 - WARNING - No valid moves available!
+2025-06-17 18:26:44,536 - WARNING - No valid moves available!
+2025-06-17 18:26:44,536 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,538 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,552 - ERROR - No valid moves available!
+2025-06-17 18:26:44,559 - ERROR - No valid moves available!
+2025-06-17 18:26:44,575 - WARNING - No valid moves available!
+2025-06-17 18:26:44,575 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,577 - ERROR - No valid moves available!
+2025-06-17 18:26:44,786 - WARNING - No valid moves available!
+2025-06-17 18:26:44,792 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,792 - ERROR - No valid moves available!
+2025-06-17 18:26:44,794 - WARNING - No valid moves available!
+2025-06-17 18:26:44,802 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,811 - ERROR - No valid moves available!
+2025-06-17 18:26:44,850 - WARNING - No valid moves available!
+2025-06-17 18:26:44,857 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,857 - WARNING - No valid moves available!
+2025-06-17 18:26:44,857 - ERROR - No valid moves available!
+2025-06-17 18:26:44,857 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,859 - ERROR - No valid moves available!
+2025-06-17 18:26:44,860 - WARNING - No valid moves available!
+2025-06-17 18:26:44,865 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,867 - ERROR - No valid moves available!
+2025-06-17 18:26:44,869 - WARNING - No valid moves available!
+2025-06-17 18:26:44,870 - WARNING - No valid moves available!
+2025-06-17 18:26:44,870 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,871 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,872 - ERROR - No valid moves available!
+2025-06-17 18:26:44,874 - WARNING - No valid moves available!
+2025-06-17 18:26:44,874 - ERROR - No valid moves available!
+2025-06-17 18:26:44,886 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,887 - WARNING - No valid moves available!
+2025-06-17 18:26:44,888 - ERROR - No valid moves available!
+2025-06-17 18:26:44,890 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,891 - ERROR - No valid moves available!
+2025-06-17 18:26:44,920 - WARNING - No valid moves available!
+2025-06-17 18:26:44,927 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,935 - ERROR - No valid moves available!
+2025-06-17 18:26:44,937 - WARNING - No valid moves available!
+2025-06-17 18:26:44,938 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,939 - ERROR - No valid moves available!
+2025-06-17 18:26:44,951 - WARNING - No valid moves available!
+2025-06-17 18:26:44,951 - WARNING - No valid moves available!
+2025-06-17 18:26:44,953 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,953 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,953 - ERROR - No valid moves available!
+2025-06-17 18:26:44,955 - ERROR - No valid moves available!
+2025-06-17 18:26:44,958 - WARNING - No valid moves available!
+2025-06-17 18:26:44,962 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,962 - ERROR - No valid moves available!
+2025-06-17 18:26:44,987 - WARNING - No valid moves available!
+2025-06-17 18:26:44,988 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:44,988 - ERROR - No valid moves available!
+2025-06-17 18:26:45,017 - WARNING - No valid moves available!
+2025-06-17 18:26:45,017 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:45,023 - ERROR - No valid moves available!
+2025-06-17 18:26:45,079 - WARNING - No valid moves available!
+2025-06-17 18:26:45,080 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:45,084 - ERROR - No valid moves available!
+2025-06-17 18:26:45,092 - WARNING - No valid moves available!
+2025-06-17 18:26:45,092 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:45,099 - ERROR - No valid moves available!
+2025-06-17 18:26:45,106 - WARNING - No valid moves available!
+2025-06-17 18:26:45,107 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:45,108 - ERROR - No valid moves available!
+2025-06-17 18:26:45,123 - WARNING - No valid moves available!
+2025-06-17 18:26:45,123 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:45,129 - ERROR - No valid moves available!
+2025-06-17 18:26:45,130 - WARNING - No valid moves available!
+2025-06-17 18:26:45,130 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:45,135 - ERROR - No valid moves available!
+2025-06-17 18:26:46,091 - WARNING - No valid moves available!
+2025-06-17 18:26:46,096 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:46,116 - ERROR - No valid moves available!
+2025-06-17 18:26:46,913 - WARNING - No valid moves available!
+2025-06-17 18:26:46,913 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:46,928 - ERROR - No valid moves available!
+2025-06-17 18:26:47,247 - WARNING - No valid moves available!
+2025-06-17 18:26:47,253 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,258 - ERROR - No valid moves available!
+2025-06-17 18:26:47,258 - WARNING - No valid moves available!
+2025-06-17 18:26:47,267 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,268 - ERROR - No valid moves available!
+2025-06-17 18:26:47,324 - WARNING - No valid moves available!
+2025-06-17 18:26:47,331 - WARNING - No valid moves available!
+2025-06-17 18:26:47,331 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,331 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,332 - ERROR - No valid moves available!
+2025-06-17 18:26:47,334 - ERROR - No valid moves available!
+2025-06-17 18:26:47,335 - WARNING - No valid moves available!
+2025-06-17 18:26:47,348 - WARNING - No valid moves available!
+2025-06-17 18:26:47,348 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,352 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,353 - ERROR - No valid moves available!
+2025-06-17 18:26:47,353 - ERROR - No valid moves available!
+2025-06-17 18:26:47,357 - WARNING - No valid moves available!
+2025-06-17 18:26:47,363 - WARNING - No valid moves available!
+2025-06-17 18:26:47,364 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,365 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,366 - ERROR - No valid moves available!
+2025-06-17 18:26:47,366 - ERROR - No valid moves available!
+2025-06-17 18:26:47,367 - WARNING - No valid moves available!
+2025-06-17 18:26:47,374 - WARNING - No valid moves available!
+2025-06-17 18:26:47,374 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,380 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:47,382 - ERROR - No valid moves available!
+2025-06-17 18:26:47,382 - ERROR - No valid moves available!
+2025-06-17 18:26:48,154 - WARNING - No valid moves available!
+2025-06-17 18:26:48,160 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:48,164 - ERROR - No valid moves available!
+2025-06-17 18:26:48,194 - WARNING - No valid moves available!
+2025-06-17 18:26:48,202 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:48,204 - ERROR - No valid moves available!
+2025-06-17 18:26:48,347 - WARNING - No valid moves available!
+2025-06-17 18:26:48,352 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:48,360 - ERROR - No valid moves available!
+2025-06-17 18:26:50,297 - WARNING - No valid moves available!
+2025-06-17 18:26:50,302 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:50,303 - ERROR - No valid moves available!
+2025-06-17 18:26:50,345 - WARNING - No valid moves available!
+2025-06-17 18:26:50,358 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:50,362 - ERROR - No valid moves available!
+2025-06-17 18:26:50,384 - WARNING - No valid moves available!
+2025-06-17 18:26:50,385 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:50,386 - ERROR - No valid moves available!
+2025-06-17 18:26:50,401 - WARNING - No valid moves available!
+2025-06-17 18:26:50,407 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:50,408 - ERROR - No valid moves available!
+2025-06-17 18:26:50,432 - WARNING - No valid moves available!
+2025-06-17 18:26:50,433 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:50,434 - ERROR - No valid moves available!
+2025-06-17 18:26:50,511 - WARNING - No valid moves available!
+2025-06-17 18:26:50,516 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:50,529 - ERROR - No valid moves available!
+2025-06-17 18:26:53,141 - WARNING - No valid moves available!
+2025-06-17 18:26:53,146 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:53,153 - ERROR - No valid moves available!
+2025-06-17 18:26:53,159 - WARNING - No valid moves available!
+2025-06-17 18:26:53,171 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:53,172 - ERROR - No valid moves available!
+2025-06-17 18:26:53,285 - WARNING - No valid moves available!
+2025-06-17 18:26:53,290 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:26:53,295 - ERROR - No valid moves available!
+2025-06-17 18:31:59,541 - WARNING - No valid moves available!
+2025-06-17 18:31:59,547 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:31:59,552 - ERROR - No valid moves available!
+2025-06-17 18:32:47,011 - WARNING - No valid moves available!
+2025-06-17 18:32:47,011 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:32:47,011 - ERROR - No valid moves available!
+2025-06-17 18:32:47,017 - WARNING - No valid moves available!
+2025-06-17 18:32:47,031 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:32:47,037 - ERROR - No valid moves available!
+2025-06-17 18:32:47,053 - WARNING - No valid moves available!
+2025-06-17 18:32:47,054 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:32:47,060 - ERROR - No valid moves available!
+2025-06-17 18:33:01,100 - WARNING - No valid moves available!
+2025-06-17 18:33:01,105 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:01,110 - ERROR - No valid moves available!
+2025-06-17 18:33:01,112 - WARNING - No valid moves available!
+2025-06-17 18:33:01,118 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:01,120 - ERROR - No valid moves available!
+2025-06-17 18:33:01,185 - WARNING - No valid moves available!
+2025-06-17 18:33:01,191 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:01,199 - ERROR - No valid moves available!
+2025-06-17 18:33:08,681 - WARNING - No valid moves available!
+2025-06-17 18:33:08,683 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:08,711 - ERROR - No valid moves available!
+2025-06-17 18:33:09,024 - WARNING - No valid moves available!
+2025-06-17 18:33:09,036 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,037 - WARNING - No valid moves available!
+2025-06-17 18:33:09,037 - ERROR - No valid moves available!
+2025-06-17 18:33:09,039 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,042 - ERROR - No valid moves available!
+2025-06-17 18:33:09,131 - WARNING - No valid moves available!
+2025-06-17 18:33:09,136 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,136 - ERROR - No valid moves available!
+2025-06-17 18:33:09,136 - WARNING - No valid moves available!
+2025-06-17 18:33:09,140 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,147 - ERROR - No valid moves available!
+2025-06-17 18:33:09,149 - WARNING - No valid moves available!
+2025-06-17 18:33:09,166 - WARNING - No valid moves available!
+2025-06-17 18:33:09,174 - WARNING - No valid moves available!
+2025-06-17 18:33:09,181 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,181 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,183 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,184 - ERROR - No valid moves available!
+2025-06-17 18:33:09,184 - WARNING - No valid moves available!
+2025-06-17 18:33:09,184 - ERROR - No valid moves available!
+2025-06-17 18:33:09,185 - WARNING - No valid moves available!
+2025-06-17 18:33:09,185 - ERROR - No valid moves available!
+2025-06-17 18:33:09,187 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,190 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,191 - WARNING - No valid moves available!
+2025-06-17 18:33:09,191 - ERROR - No valid moves available!
+2025-06-17 18:33:09,193 - ERROR - No valid moves available!
+2025-06-17 18:33:09,193 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,194 - WARNING - No valid moves available!
+2025-06-17 18:33:09,195 - ERROR - No valid moves available!
+2025-06-17 18:33:09,195 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:09,197 - ERROR - No valid moves available!
+2025-06-17 18:33:11,090 - WARNING - No valid moves available!
+2025-06-17 18:33:11,098 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:11,099 - ERROR - No valid moves available!
+2025-06-17 18:33:11,231 - WARNING - No valid moves available!
+2025-06-17 18:33:11,232 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:11,237 - ERROR - No valid moves available!
+2025-06-17 18:33:12,461 - WARNING - No valid moves available!
+2025-06-17 18:33:12,473 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:12,493 - ERROR - No valid moves available!
+2025-06-17 18:33:12,549 - WARNING - No valid moves available!
+2025-06-17 18:33:12,554 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:12,555 - ERROR - No valid moves available!
+2025-06-17 18:33:12,583 - WARNING - No valid moves available!
+2025-06-17 18:33:12,584 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:12,585 - ERROR - No valid moves available!
+2025-06-17 18:33:12,617 - WARNING - No valid moves available!
+2025-06-17 18:33:12,617 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:12,619 - ERROR - No valid moves available!
+2025-06-17 18:33:13,510 - WARNING - No valid moves available!
+2025-06-17 18:33:13,511 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:13,517 - ERROR - No valid moves available!
+2025-06-17 18:33:15,804 - WARNING - No valid moves available!
+2025-06-17 18:33:15,809 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:15,810 - WARNING - No valid moves available!
+2025-06-17 18:33:15,810 - ERROR - No valid moves available!
+2025-06-17 18:33:15,817 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:33:15,835 - ERROR - No valid moves available!
+2025-06-17 18:38:35,042 - WARNING - No valid moves available!
+2025-06-17 18:38:35,047 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:38:35,048 - ERROR - No valid moves available!
+2025-06-17 18:52:18,914 - WARNING - No valid moves available!
+2025-06-17 18:52:18,920 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:18,924 - ERROR - No valid moves available!
+2025-06-17 18:52:18,930 - WARNING - No valid moves available!
+2025-06-17 18:52:18,937 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:18,942 - ERROR - No valid moves available!
+2025-06-17 18:52:18,960 - WARNING - No valid moves available!
+2025-06-17 18:52:18,961 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:18,964 - ERROR - No valid moves available!
+2025-06-17 18:52:19,491 - WARNING - No valid moves available!
+2025-06-17 18:52:19,492 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:19,500 - ERROR - No valid moves available!
+2025-06-17 18:52:19,508 - WARNING - No valid moves available!
+2025-06-17 18:52:19,513 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:19,527 - ERROR - No valid moves available!
+2025-06-17 18:52:20,327 - WARNING - No valid moves available!
+2025-06-17 18:52:20,332 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:20,337 - ERROR - No valid moves available!
+2025-06-17 18:52:34,401 - WARNING - No valid moves available!
+2025-06-17 18:52:34,414 - WARNING - No valid moves available!
+2025-06-17 18:52:34,414 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:34,421 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:34,421 - ERROR - No valid moves available!
+2025-06-17 18:52:34,427 - ERROR - No valid moves available!
+2025-06-17 18:52:34,462 - WARNING - No valid moves available!
+2025-06-17 18:52:34,463 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:34,464 - ERROR - No valid moves available!
+2025-06-17 18:52:52,076 - WARNING - No valid moves available!
+2025-06-17 18:52:52,077 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:52:52,081 - ERROR - No valid moves available!
+2025-06-17 18:55:26,885 - WARNING - No valid moves available!
+2025-06-17 18:55:26,885 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:26,891 - ERROR - No valid moves available!
+2025-06-17 18:55:26,905 - WARNING - No valid moves available!
+2025-06-17 18:55:26,905 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:26,905 - ERROR - No valid moves available!
+2025-06-17 18:55:26,936 - WARNING - No valid moves available!
+2025-06-17 18:55:26,940 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:26,945 - ERROR - No valid moves available!
+2025-06-17 18:55:27,518 - WARNING - No valid moves available!
+2025-06-17 18:55:27,518 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:27,519 - ERROR - No valid moves available!
+2025-06-17 18:55:27,536 - WARNING - No valid moves available!
+2025-06-17 18:55:27,549 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:27,551 - ERROR - No valid moves available!
+2025-06-17 18:55:28,343 - WARNING - No valid moves available!
+2025-06-17 18:55:28,348 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:28,349 - ERROR - No valid moves available!
+2025-06-17 18:55:34,669 - WARNING - No valid moves available!
+2025-06-17 18:55:34,682 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:34,687 - ERROR - No valid moves available!
+2025-06-17 18:55:34,688 - WARNING - No valid moves available!
+2025-06-17 18:55:34,695 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:34,696 - ERROR - No valid moves available!
+2025-06-17 18:55:34,734 - WARNING - No valid moves available!
+2025-06-17 18:55:34,746 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:34,748 - ERROR - No valid moves available!
+2025-06-17 18:55:46,282 - WARNING - No valid moves available!
+2025-06-17 18:55:46,288 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:55:46,300 - ERROR - No valid moves available!
+2025-06-17 18:56:28,716 - WARNING - No valid moves available!
+2025-06-17 18:56:28,716 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:28,723 - ERROR - No valid moves available!
+2025-06-17 18:56:28,741 - WARNING - No valid moves available!
+2025-06-17 18:56:28,742 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:28,743 - ERROR - No valid moves available!
+2025-06-17 18:56:30,323 - WARNING - No valid moves available!
+2025-06-17 18:56:30,324 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:30,342 - ERROR - No valid moves available!
+2025-06-17 18:56:30,343 - WARNING - No valid moves available!
+2025-06-17 18:56:30,349 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:30,356 - ERROR - No valid moves available!
+2025-06-17 18:56:32,158 - WARNING - No valid moves available!
+2025-06-17 18:56:32,165 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:32,165 - ERROR - No valid moves available!
+2025-06-17 18:56:47,051 - WARNING - No valid moves available!
+2025-06-17 18:56:47,051 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:47,057 - ERROR - No valid moves available!
+2025-06-17 18:56:47,063 - WARNING - No valid moves available!
+2025-06-17 18:56:47,079 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:47,082 - ERROR - No valid moves available!
+2025-06-17 18:56:48,106 - WARNING - No valid moves available!
+2025-06-17 18:56:48,106 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:48,112 - ERROR - No valid moves available!
+2025-06-17 18:56:48,128 - WARNING - No valid moves available!
+2025-06-17 18:56:48,135 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:48,138 - ERROR - No valid moves available!
+2025-06-17 18:56:49,466 - WARNING - No valid moves available!
+2025-06-17 18:56:49,472 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:49,472 - ERROR - No valid moves available!
+2025-06-17 18:56:59,096 - WARNING - No valid moves available!
+2025-06-17 18:56:59,097 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:59,102 - ERROR - No valid moves available!
+2025-06-17 18:56:59,104 - WARNING - No valid moves available!
+2025-06-17 18:56:59,109 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:59,110 - ERROR - No valid moves available!
+2025-06-17 18:56:59,730 - WARNING - No valid moves available!
+2025-06-17 18:56:59,736 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:59,756 - ERROR - No valid moves available!
+2025-06-17 18:56:59,757 - WARNING - No valid moves available!
+2025-06-17 18:56:59,766 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:56:59,772 - ERROR - No valid moves available!
+2025-06-17 18:57:00,661 - WARNING - No valid moves available!
+2025-06-17 18:57:00,668 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:00,669 - ERROR - No valid moves available!
+2025-06-17 18:57:03,032 - WARNING - No valid moves available!
+2025-06-17 18:57:03,039 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:03,045 - ERROR - No valid moves available!
+2025-06-17 18:57:03,046 - WARNING - No valid moves available!
+2025-06-17 18:57:03,047 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:03,053 - ERROR - No valid moves available!
+2025-06-17 18:57:03,077 - WARNING - No valid moves available!
+2025-06-17 18:57:03,084 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:03,091 - ERROR - No valid moves available!
+2025-06-17 18:57:04,240 - WARNING - No valid moves available!
+2025-06-17 18:57:04,244 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,245 - ERROR - No valid moves available!
+2025-06-17 18:57:04,250 - WARNING - No valid moves available!
+2025-06-17 18:57:04,262 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,263 - ERROR - No valid moves available!
+2025-06-17 18:57:04,274 - WARNING - No valid moves available!
+2025-06-17 18:57:04,275 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,288 - ERROR - No valid moves available!
+2025-06-17 18:57:04,509 - WARNING - No valid moves available!
+2025-06-17 18:57:04,521 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,542 - WARNING - No valid moves available!
+2025-06-17 18:57:04,542 - ERROR - No valid moves available!
+2025-06-17 18:57:04,542 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,545 - ERROR - No valid moves available!
+2025-06-17 18:57:04,559 - WARNING - No valid moves available!
+2025-06-17 18:57:04,565 - WARNING - No valid moves available!
+2025-06-17 18:57:04,566 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,573 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,573 - ERROR - No valid moves available!
+2025-06-17 18:57:04,579 - ERROR - No valid moves available!
+2025-06-17 18:57:04,590 - WARNING - No valid moves available!
+2025-06-17 18:57:04,591 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,593 - ERROR - No valid moves available!
+2025-06-17 18:57:04,596 - WARNING - No valid moves available!
+2025-06-17 18:57:04,596 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,597 - WARNING - No valid moves available!
+2025-06-17 18:57:04,597 - ERROR - No valid moves available!
+2025-06-17 18:57:04,597 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,603 - WARNING - No valid moves available!
+2025-06-17 18:57:04,616 - WARNING - No valid moves available!
+2025-06-17 18:57:04,624 - ERROR - No valid moves available!
+2025-06-17 18:57:04,626 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,628 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,632 - ERROR - No valid moves available!
+2025-06-17 18:57:04,633 - ERROR - No valid moves available!
+2025-06-17 18:57:04,659 - WARNING - No valid moves available!
+2025-06-17 18:57:04,661 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,666 - ERROR - No valid moves available!
+2025-06-17 18:57:04,691 - WARNING - No valid moves available!
+2025-06-17 18:57:04,697 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,708 - ERROR - No valid moves available!
+2025-06-17 18:57:04,709 - WARNING - No valid moves available!
+2025-06-17 18:57:04,709 - WARNING - No valid moves available!
+2025-06-17 18:57:04,716 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,718 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,719 - ERROR - No valid moves available!
+2025-06-17 18:57:04,724 - WARNING - No valid moves available!
+2025-06-17 18:57:04,725 - ERROR - No valid moves available!
+2025-06-17 18:57:04,735 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,735 - WARNING - No valid moves available!
+2025-06-17 18:57:04,737 - ERROR - No valid moves available!
+2025-06-17 18:57:04,743 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,749 - ERROR - No valid moves available!
+2025-06-17 18:57:04,751 - WARNING - No valid moves available!
+2025-06-17 18:57:04,752 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,758 - ERROR - No valid moves available!
+2025-06-17 18:57:04,824 - WARNING - No valid moves available!
+2025-06-17 18:57:04,825 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,825 - ERROR - No valid moves available!
+2025-06-17 18:57:04,843 - WARNING - No valid moves available!
+2025-06-17 18:57:04,843 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,848 - ERROR - No valid moves available!
+2025-06-17 18:57:04,861 - WARNING - No valid moves available!
+2025-06-17 18:57:04,873 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,874 - ERROR - No valid moves available!
+2025-06-17 18:57:04,878 - WARNING - No valid moves available!
+2025-06-17 18:57:04,879 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,880 - ERROR - No valid moves available!
+2025-06-17 18:57:04,884 - WARNING - No valid moves available!
+2025-06-17 18:57:04,891 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:04,893 - ERROR - No valid moves available!
+2025-06-17 18:57:05,718 - WARNING - No valid moves available!
+2025-06-17 18:57:05,723 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:05,748 - ERROR - No valid moves available!
+2025-06-17 18:57:05,973 - WARNING - No valid moves available!
+2025-06-17 18:57:05,973 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:05,981 - ERROR - No valid moves available!
+2025-06-17 18:57:05,994 - WARNING - No valid moves available!
+2025-06-17 18:57:05,994 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,000 - ERROR - No valid moves available!
+2025-06-17 18:57:06,043 - WARNING - No valid moves available!
+2025-06-17 18:57:06,044 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,049 - ERROR - No valid moves available!
+2025-06-17 18:57:06,077 - WARNING - No valid moves available!
+2025-06-17 18:57:06,078 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,081 - ERROR - No valid moves available!
+2025-06-17 18:57:06,092 - WARNING - No valid moves available!
+2025-06-17 18:57:06,094 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,099 - ERROR - No valid moves available!
+2025-06-17 18:57:06,100 - WARNING - No valid moves available!
+2025-06-17 18:57:06,108 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,114 - WARNING - No valid moves available!
+2025-06-17 18:57:06,119 - WARNING - No valid moves available!
+2025-06-17 18:57:06,122 - ERROR - No valid moves available!
+2025-06-17 18:57:06,124 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,124 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,126 - WARNING - No valid moves available!
+2025-06-17 18:57:06,127 - ERROR - No valid moves available!
+2025-06-17 18:57:06,127 - ERROR - No valid moves available!
+2025-06-17 18:57:06,127 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,128 - WARNING - No valid moves available!
+2025-06-17 18:57:06,134 - ERROR - No valid moves available!
+2025-06-17 18:57:06,135 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:06,138 - ERROR - No valid moves available!
+2025-06-17 18:57:07,252 - WARNING - No valid moves available!
+2025-06-17 18:57:07,253 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:07,262 - ERROR - No valid moves available!
+2025-06-17 18:57:07,302 - WARNING - No valid moves available!
+2025-06-17 18:57:07,303 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:07,311 - ERROR - No valid moves available!
+2025-06-17 18:57:07,447 - WARNING - No valid moves available!
+2025-06-17 18:57:07,454 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:07,464 - ERROR - No valid moves available!
+2025-06-17 18:57:08,501 - WARNING - No valid moves available!
+2025-06-17 18:57:08,519 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:08,530 - ERROR - No valid moves available!
+2025-06-17 18:57:08,561 - WARNING - No valid moves available!
+2025-06-17 18:57:08,568 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:08,569 - ERROR - No valid moves available!
+2025-06-17 18:57:08,664 - WARNING - No valid moves available!
+2025-06-17 18:57:08,673 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:08,678 - ERROR - No valid moves available!
+2025-06-17 18:57:10,729 - WARNING - No valid moves available!
+2025-06-17 18:57:10,734 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:10,735 - ERROR - No valid moves available!
+2025-06-17 18:57:10,914 - WARNING - No valid moves available!
+2025-06-17 18:57:10,916 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:10,916 - ERROR - No valid moves available!
+2025-06-17 18:57:28,453 - WARNING - No valid moves available!
+2025-06-17 18:57:28,458 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:28,466 - ERROR - No valid moves available!
+2025-06-17 18:57:28,467 - WARNING - No valid moves available!
+2025-06-17 18:57:28,467 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:28,468 - ERROR - No valid moves available!
+2025-06-17 18:57:30,348 - WARNING - No valid moves available!
+2025-06-17 18:57:30,364 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:30,371 - ERROR - No valid moves available!
+2025-06-17 18:57:43,893 - WARNING - No valid moves available!
+2025-06-17 18:57:43,899 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:43,900 - ERROR - No valid moves available!
+2025-06-17 18:57:43,907 - WARNING - No valid moves available!
+2025-06-17 18:57:43,907 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:43,909 - ERROR - No valid moves available!
+2025-06-17 18:57:45,149 - WARNING - No valid moves available!
+2025-06-17 18:57:45,154 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:45,164 - ERROR - No valid moves available!
+2025-06-17 18:57:48,651 - WARNING - No valid moves available!
+2025-06-17 18:57:48,659 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:48,659 - ERROR - No valid moves available!
+2025-06-17 18:57:48,676 - WARNING - No valid moves available!
+2025-06-17 18:57:48,682 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:48,684 - ERROR - No valid moves available!
+2025-06-17 18:57:48,709 - WARNING - No valid moves available!
+2025-06-17 18:57:48,721 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:48,721 - ERROR - No valid moves available!
+2025-06-17 18:57:49,770 - WARNING - No valid moves available!
+2025-06-17 18:57:49,775 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:49,780 - ERROR - No valid moves available!
+2025-06-17 18:57:49,780 - WARNING - No valid moves available!
+2025-06-17 18:57:49,785 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:49,785 - ERROR - No valid moves available!
+2025-06-17 18:57:49,810 - WARNING - No valid moves available!
+2025-06-17 18:57:49,811 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:49,812 - ERROR - No valid moves available!
+2025-06-17 18:57:50,010 - WARNING - No valid moves available!
+2025-06-17 18:57:50,011 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,015 - ERROR - No valid moves available!
+2025-06-17 18:57:50,022 - WARNING - No valid moves available!
+2025-06-17 18:57:50,023 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,030 - ERROR - No valid moves available!
+2025-06-17 18:57:50,078 - WARNING - No valid moves available!
+2025-06-17 18:57:50,078 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,080 - ERROR - No valid moves available!
+2025-06-17 18:57:50,091 - WARNING - No valid moves available!
+2025-06-17 18:57:50,092 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,093 - ERROR - No valid moves available!
+2025-06-17 18:57:50,124 - WARNING - No valid moves available!
+2025-06-17 18:57:50,129 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,131 - WARNING - No valid moves available!
+2025-06-17 18:57:50,131 - ERROR - No valid moves available!
+2025-06-17 18:57:50,137 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,143 - ERROR - No valid moves available!
+2025-06-17 18:57:50,160 - WARNING - No valid moves available!
+2025-06-17 18:57:50,160 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,162 - ERROR - No valid moves available!
+2025-06-17 18:57:50,165 - WARNING - No valid moves available!
+2025-06-17 18:57:50,170 - WARNING - No valid moves available!
+2025-06-17 18:57:50,171 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,171 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,172 - ERROR - No valid moves available!
+2025-06-17 18:57:50,178 - ERROR - No valid moves available!
+2025-06-17 18:57:50,180 - WARNING - No valid moves available!
+2025-06-17 18:57:50,191 - WARNING - No valid moves available!
+2025-06-17 18:57:50,191 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,193 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,193 - ERROR - No valid moves available!
+2025-06-17 18:57:50,194 - ERROR - No valid moves available!
+2025-06-17 18:57:50,257 - WARNING - No valid moves available!
+2025-06-17 18:57:50,267 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,283 - ERROR - No valid moves available!
+2025-06-17 18:57:50,306 - WARNING - No valid moves available!
+2025-06-17 18:57:50,312 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,317 - ERROR - No valid moves available!
+2025-06-17 18:57:50,344 - WARNING - No valid moves available!
+2025-06-17 18:57:50,345 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,347 - ERROR - No valid moves available!
+2025-06-17 18:57:50,352 - WARNING - No valid moves available!
+2025-06-17 18:57:50,353 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,354 - WARNING - No valid moves available!
+2025-06-17 18:57:50,354 - ERROR - No valid moves available!
+2025-06-17 18:57:50,355 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,361 - WARNING - No valid moves available!
+2025-06-17 18:57:50,362 - ERROR - No valid moves available!
+2025-06-17 18:57:50,362 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,371 - ERROR - No valid moves available!
+2025-06-17 18:57:50,372 - WARNING - No valid moves available!
+2025-06-17 18:57:50,373 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,374 - ERROR - No valid moves available!
+2025-06-17 18:57:50,412 - WARNING - No valid moves available!
+2025-06-17 18:57:50,414 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,416 - ERROR - No valid moves available!
+2025-06-17 18:57:50,542 - WARNING - No valid moves available!
+2025-06-17 18:57:50,547 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,553 - ERROR - No valid moves available!
+2025-06-17 18:57:50,562 - WARNING - No valid moves available!
+2025-06-17 18:57:50,562 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,564 - ERROR - No valid moves available!
+2025-06-17 18:57:50,576 - WARNING - No valid moves available!
+2025-06-17 18:57:50,576 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,578 - ERROR - No valid moves available!
+2025-06-17 18:57:50,593 - WARNING - No valid moves available!
+2025-06-17 18:57:50,594 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,595 - WARNING - No valid moves available!
+2025-06-17 18:57:50,607 - ERROR - No valid moves available!
+2025-06-17 18:57:50,607 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:57:50,609 - ERROR - No valid moves available!
+2025-06-17 18:58:04,087 - WARNING - No valid moves available!
+2025-06-17 18:58:04,094 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:04,104 - ERROR - No valid moves available!
+2025-06-17 18:58:05,421 - WARNING - No valid moves available!
+2025-06-17 18:58:05,426 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:05,436 - ERROR - No valid moves available!
+2025-06-17 18:58:07,585 - WARNING - No valid moves available!
+2025-06-17 18:58:07,586 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:07,586 - ERROR - No valid moves available!
+2025-06-17 18:58:23,152 - WARNING - No valid moves available!
+2025-06-17 18:58:23,157 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:23,163 - ERROR - No valid moves available!
+2025-06-17 18:58:36,202 - WARNING - No valid moves available!
+2025-06-17 18:58:36,220 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:36,227 - ERROR - No valid moves available!
+2025-06-17 18:58:39,205 - WARNING - No valid moves available!
+2025-06-17 18:58:39,217 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:39,228 - ERROR - No valid moves available!
+2025-06-17 18:58:39,229 - WARNING - No valid moves available!
+2025-06-17 18:58:39,233 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:39,240 - ERROR - No valid moves available!
+2025-06-17 18:58:40,269 - WARNING - No valid moves available!
+2025-06-17 18:58:40,274 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,274 - ERROR - No valid moves available!
+2025-06-17 18:58:40,288 - WARNING - No valid moves available!
+2025-06-17 18:58:40,302 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,311 - ERROR - No valid moves available!
+2025-06-17 18:58:40,824 - WARNING - No valid moves available!
+2025-06-17 18:58:40,828 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,828 - ERROR - No valid moves available!
+2025-06-17 18:58:40,871 - WARNING - No valid moves available!
+2025-06-17 18:58:40,871 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,872 - ERROR - No valid moves available!
+2025-06-17 18:58:40,888 - WARNING - No valid moves available!
+2025-06-17 18:58:40,888 - WARNING - No valid moves available!
+2025-06-17 18:58:40,889 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,890 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,901 - ERROR - No valid moves available!
+2025-06-17 18:58:40,901 - ERROR - No valid moves available!
+2025-06-17 18:58:40,906 - WARNING - No valid moves available!
+2025-06-17 18:58:40,906 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,908 - ERROR - No valid moves available!
+2025-06-17 18:58:40,946 - WARNING - No valid moves available!
+2025-06-17 18:58:40,947 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:40,947 - ERROR - No valid moves available!
+2025-06-17 18:58:41,000 - WARNING - No valid moves available!
+2025-06-17 18:58:41,006 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:41,008 - ERROR - No valid moves available!
+2025-06-17 18:58:41,092 - WARNING - No valid moves available!
+2025-06-17 18:58:41,098 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:41,112 - ERROR - No valid moves available!
+2025-06-17 18:58:41,116 - WARNING - No valid moves available!
+2025-06-17 18:58:41,117 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:41,132 - ERROR - No valid moves available!
+2025-06-17 18:58:41,150 - WARNING - No valid moves available!
+2025-06-17 18:58:41,151 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:41,152 - ERROR - No valid moves available!
+2025-06-17 18:58:41,187 - WARNING - No valid moves available!
+2025-06-17 18:58:41,188 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:41,189 - ERROR - No valid moves available!
+2025-06-17 18:58:43,873 - WARNING - No valid moves available!
+2025-06-17 18:58:43,881 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:58:43,885 - ERROR - No valid moves available!
+2025-06-17 18:59:24,686 - WARNING - No valid moves available!
+2025-06-17 18:59:24,692 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:59:24,692 - ERROR - No valid moves available!
+2025-06-17 18:59:25,714 - WARNING - No valid moves available!
+2025-06-17 18:59:25,732 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:59:25,733 - ERROR - No valid moves available!
+2025-06-17 18:59:26,257 - WARNING - No valid moves available!
+2025-06-17 18:59:26,257 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:59:26,258 - ERROR - No valid moves available!
+2025-06-17 18:59:26,265 - WARNING - No valid moves available!
+2025-06-17 18:59:26,269 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:59:26,277 - ERROR - No valid moves available!
+2025-06-17 18:59:26,293 - WARNING - No valid moves available!
+2025-06-17 18:59:26,305 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 18:59:26,305 - ERROR - No valid moves available!
+2025-06-17 19:42:34,265 - WARNING - No valid moves available!
+2025-06-17 19:42:34,266 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:42:34,282 - ERROR - No valid moves available!
+2025-06-17 19:42:34,293 - WARNING - No valid moves available!
+2025-06-17 19:42:34,302 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:42:34,308 - ERROR - No valid moves available!
+2025-06-17 19:42:34,312 - WARNING - No valid moves available!
+2025-06-17 19:42:34,318 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:42:34,325 - ERROR - No valid moves available!
+2025-06-17 19:42:35,330 - WARNING - No valid moves available!
+2025-06-17 19:42:35,342 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:42:35,348 - ERROR - No valid moves available!
+2025-06-17 19:42:35,355 - WARNING - No valid moves available!
+2025-06-17 19:42:35,357 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:42:35,358 - ERROR - No valid moves available!
+2025-06-17 19:42:36,683 - WARNING - No valid moves available!
+2025-06-17 19:42:36,707 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:42:36,719 - ERROR - No valid moves available!
+2025-06-17 19:45:47,982 - WARNING - No valid moves available!
+2025-06-17 19:45:47,987 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:45:47,987 - ERROR - No valid moves available!
+2025-06-17 19:45:48,001 - WARNING - No valid moves available!
+2025-06-17 19:45:48,006 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:45:48,023 - ERROR - No valid moves available!
+2025-06-17 19:45:48,023 - WARNING - No valid moves available!
+2025-06-17 19:45:48,024 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:45:48,037 - ERROR - No valid moves available!
+2025-06-17 19:45:49,065 - WARNING - No valid moves available!
+2025-06-17 19:45:49,072 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:45:49,072 - ERROR - No valid moves available!
+2025-06-17 19:45:49,093 - WARNING - No valid moves available!
+2025-06-17 19:45:49,094 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:45:49,102 - ERROR - No valid moves available!
+2025-06-17 19:45:50,412 - WARNING - No valid moves available!
+2025-06-17 19:45:50,412 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:45:50,419 - ERROR - No valid moves available!
+2025-06-17 19:47:26,895 - WARNING - No valid moves available!
+2025-06-17 19:47:26,903 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:26,905 - ERROR - No valid moves available!
+2025-06-17 19:47:29,015 - WARNING - No valid moves available!
+2025-06-17 19:47:29,028 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:29,030 - ERROR - No valid moves available!
+2025-06-17 19:47:34,823 - WARNING - No valid moves available!
+2025-06-17 19:47:34,828 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:34,834 - ERROR - No valid moves available!
+2025-06-17 19:47:34,835 - WARNING - No valid moves available!
+2025-06-17 19:47:34,836 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:34,837 - ERROR - No valid moves available!
+2025-06-17 19:47:34,866 - WARNING - No valid moves available!
+2025-06-17 19:47:34,867 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:34,873 - ERROR - No valid moves available!
+2025-06-17 19:47:36,556 - WARNING - No valid moves available!
+2025-06-17 19:47:36,562 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:36,567 - ERROR - No valid moves available!
+2025-06-17 19:47:36,592 - WARNING - No valid moves available!
+2025-06-17 19:47:36,594 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:36,598 - ERROR - No valid moves available!
+2025-06-17 19:47:36,610 - WARNING - No valid moves available!
+2025-06-17 19:47:36,615 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:36,621 - ERROR - No valid moves available!
+2025-06-17 19:47:36,849 - WARNING - No valid moves available!
+2025-06-17 19:47:36,854 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:36,866 - ERROR - No valid moves available!
+2025-06-17 19:47:36,954 - WARNING - No valid moves available!
+2025-06-17 19:47:36,955 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:36,962 - ERROR - No valid moves available!
+2025-06-17 19:47:37,022 - WARNING - No valid moves available!
+2025-06-17 19:47:37,022 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,022 - ERROR - No valid moves available!
+2025-06-17 19:47:37,070 - WARNING - No valid moves available!
+2025-06-17 19:47:37,081 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,086 - ERROR - No valid moves available!
+2025-06-17 19:47:37,104 - WARNING - No valid moves available!
+2025-06-17 19:47:37,106 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,114 - ERROR - No valid moves available!
+2025-06-17 19:47:37,130 - WARNING - No valid moves available!
+2025-06-17 19:47:37,131 - WARNING - No valid moves available!
+2025-06-17 19:47:37,131 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,138 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,141 - ERROR - No valid moves available!
+2025-06-17 19:47:37,146 - ERROR - No valid moves available!
+2025-06-17 19:47:37,151 - WARNING - No valid moves available!
+2025-06-17 19:47:37,152 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,154 - ERROR - No valid moves available!
+2025-06-17 19:47:37,155 - WARNING - No valid moves available!
+2025-06-17 19:47:37,156 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,156 - ERROR - No valid moves available!
+2025-06-17 19:47:37,243 - WARNING - No valid moves available!
+2025-06-17 19:47:37,248 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,256 - ERROR - No valid moves available!
+2025-06-17 19:47:37,310 - WARNING - No valid moves available!
+2025-06-17 19:47:37,316 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,321 - ERROR - No valid moves available!
+2025-06-17 19:47:37,399 - WARNING - No valid moves available!
+2025-06-17 19:47:37,400 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,400 - ERROR - No valid moves available!
+2025-06-17 19:47:37,436 - WARNING - No valid moves available!
+2025-06-17 19:47:37,444 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,444 - ERROR - No valid moves available!
+2025-06-17 19:47:37,451 - WARNING - No valid moves available!
+2025-06-17 19:47:37,451 - WARNING - No valid moves available!
+2025-06-17 19:47:37,452 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,454 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,460 - ERROR - No valid moves available!
+2025-06-17 19:47:37,471 - ERROR - No valid moves available!
+2025-06-17 19:47:37,473 - WARNING - No valid moves available!
+2025-06-17 19:47:37,473 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,475 - ERROR - No valid moves available!
+2025-06-17 19:47:37,528 - WARNING - No valid moves available!
+2025-06-17 19:47:37,531 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,531 - ERROR - No valid moves available!
+2025-06-17 19:47:37,767 - WARNING - No valid moves available!
+2025-06-17 19:47:37,781 - WARNING - No valid moves available!
+2025-06-17 19:47:37,786 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,791 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,794 - ERROR - No valid moves available!
+2025-06-17 19:47:37,796 - ERROR - No valid moves available!
+2025-06-17 19:47:37,802 - WARNING - No valid moves available!
+2025-06-17 19:47:37,811 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,812 - ERROR - No valid moves available!
+2025-06-17 19:47:37,813 - WARNING - No valid moves available!
+2025-06-17 19:47:37,818 - WARNING - No valid moves available!
+2025-06-17 19:47:37,818 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,818 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:47:37,819 - ERROR - No valid moves available!
+2025-06-17 19:47:37,820 - ERROR - No valid moves available!
+2025-06-17 19:48:06,976 - WARNING - No valid moves available!
+2025-06-17 19:48:06,978 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:06,988 - ERROR - No valid moves available!
+2025-06-17 19:48:08,318 - WARNING - No valid moves available!
+2025-06-17 19:48:08,318 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:08,319 - ERROR - No valid moves available!
+2025-06-17 19:48:26,762 - WARNING - No valid moves available!
+2025-06-17 19:48:26,769 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:26,769 - ERROR - No valid moves available!
+2025-06-17 19:48:31,818 - WARNING - No valid moves available!
+2025-06-17 19:48:31,818 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:31,829 - ERROR - No valid moves available!
+2025-06-17 19:48:31,830 - WARNING - No valid moves available!
+2025-06-17 19:48:31,835 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:31,836 - ERROR - No valid moves available!
+2025-06-17 19:48:33,358 - WARNING - No valid moves available!
+2025-06-17 19:48:33,364 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:33,365 - WARNING - No valid moves available!
+2025-06-17 19:48:33,372 - ERROR - No valid moves available!
+2025-06-17 19:48:33,378 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:33,382 - ERROR - No valid moves available!
+2025-06-17 19:48:34,013 - WARNING - No valid moves available!
+2025-06-17 19:48:34,013 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,019 - ERROR - No valid moves available!
+2025-06-17 19:48:34,094 - WARNING - No valid moves available!
+2025-06-17 19:48:34,094 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,099 - ERROR - No valid moves available!
+2025-06-17 19:48:34,142 - WARNING - No valid moves available!
+2025-06-17 19:48:34,149 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,150 - ERROR - No valid moves available!
+2025-06-17 19:48:34,151 - WARNING - No valid moves available!
+2025-06-17 19:48:34,152 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,152 - WARNING - No valid moves available!
+2025-06-17 19:48:34,152 - ERROR - No valid moves available!
+2025-06-17 19:48:34,153 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,159 - ERROR - No valid moves available!
+2025-06-17 19:48:34,171 - WARNING - No valid moves available!
+2025-06-17 19:48:34,172 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,180 - ERROR - No valid moves available!
+2025-06-17 19:48:34,247 - WARNING - No valid moves available!
+2025-06-17 19:48:34,259 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,264 - ERROR - No valid moves available!
+2025-06-17 19:48:34,299 - WARNING - No valid moves available!
+2025-06-17 19:48:34,308 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,309 - ERROR - No valid moves available!
+2025-06-17 19:48:34,487 - WARNING - No valid moves available!
+2025-06-17 19:48:34,492 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,497 - ERROR - No valid moves available!
+2025-06-17 19:48:34,511 - WARNING - No valid moves available!
+2025-06-17 19:48:34,513 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,513 - ERROR - No valid moves available!
+2025-06-17 19:48:34,541 - WARNING - No valid moves available!
+2025-06-17 19:48:34,542 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,555 - ERROR - No valid moves available!
+2025-06-17 19:48:34,586 - WARNING - No valid moves available!
+2025-06-17 19:48:34,586 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:34,588 - ERROR - No valid moves available!
+2025-06-17 19:48:49,118 - WARNING - No valid moves available!
+2025-06-17 19:48:49,118 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:48:49,118 - ERROR - No valid moves available!
+2025-06-17 19:49:21,742 - WARNING - No valid moves available!
+2025-06-17 19:49:21,754 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:49:21,760 - ERROR - No valid moves available!
+2025-06-17 19:49:23,171 - WARNING - No valid moves available!
+2025-06-17 19:49:23,176 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:49:23,181 - ERROR - No valid moves available!
+2025-06-17 19:49:23,892 - WARNING - No valid moves available!
+2025-06-17 19:49:23,892 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:49:23,900 - ERROR - No valid moves available!
+2025-06-17 19:49:23,914 - WARNING - No valid moves available!
+2025-06-17 19:49:23,927 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:49:23,932 - ERROR - No valid moves available!
+2025-06-17 19:49:23,940 - WARNING - No valid moves available!
+2025-06-17 19:49:23,946 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 19:49:23,947 - ERROR - No valid moves available!
+2025-06-17 20:26:39,861 - WARNING - No valid moves available!
+2025-06-17 20:26:39,862 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:26:39,868 - ERROR - No valid moves available!
+2025-06-17 20:26:39,869 - WARNING - No valid moves available!
+2025-06-17 20:26:39,871 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:26:39,872 - ERROR - No valid moves available!
+2025-06-17 20:26:41,284 - WARNING - No valid moves available!
+2025-06-17 20:26:41,294 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:26:41,305 - ERROR - No valid moves available!
+2025-06-17 20:29:36,035 - WARNING - No valid moves available!
+2025-06-17 20:29:36,036 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:29:36,042 - ERROR - No valid moves available!
+2025-06-17 20:29:36,043 - WARNING - No valid moves available!
+2025-06-17 20:29:36,043 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:29:36,045 - ERROR - No valid moves available!
+2025-06-17 20:29:37,462 - WARNING - No valid moves available!
+2025-06-17 20:29:37,469 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:29:37,482 - ERROR - No valid moves available!
+2025-06-17 20:31:07,090 - WARNING - No valid moves available!
+2025-06-17 20:31:07,095 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:07,102 - ERROR - No valid moves available!
+2025-06-17 20:31:07,109 - WARNING - No valid moves available!
+2025-06-17 20:31:07,110 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:07,110 - ERROR - No valid moves available!
+2025-06-17 20:31:09,059 - WARNING - No valid moves available!
+2025-06-17 20:31:09,060 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:09,065 - ERROR - No valid moves available!
+2025-06-17 20:31:09,074 - WARNING - No valid moves available!
+2025-06-17 20:31:09,075 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:09,075 - ERROR - No valid moves available!
+2025-06-17 20:31:10,193 - WARNING - No valid moves available!
+2025-06-17 20:31:10,203 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:10,203 - ERROR - No valid moves available!
+2025-06-17 20:31:10,212 - WARNING - No valid moves available!
+2025-06-17 20:31:10,212 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:10,213 - WARNING - No valid moves available!
+2025-06-17 20:31:10,215 - ERROR - No valid moves available!
+2025-06-17 20:31:10,215 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:10,217 - ERROR - No valid moves available!
+2025-06-17 20:31:10,394 - WARNING - No valid moves available!
+2025-06-17 20:31:10,394 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:10,400 - ERROR - No valid moves available!
+2025-06-17 20:31:10,530 - WARNING - No valid moves available!
+2025-06-17 20:31:10,535 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:10,541 - ERROR - No valid moves available!
+2025-06-17 20:31:10,555 - WARNING - No valid moves available!
+2025-06-17 20:31:10,562 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:10,569 - ERROR - No valid moves available!
+2025-06-17 20:31:10,682 - WARNING - No valid moves available!
+2025-06-17 20:31:10,689 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:10,705 - ERROR - No valid moves available!
+2025-06-17 20:31:56,700 - WARNING - No valid moves available!
+2025-06-17 20:31:56,714 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:56,725 - ERROR - No valid moves available!
+2025-06-17 20:31:58,478 - WARNING - No valid moves available!
+2025-06-17 20:31:58,490 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:58,497 - ERROR - No valid moves available!
+2025-06-17 20:31:59,494 - WARNING - No valid moves available!
+2025-06-17 20:31:59,495 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:59,507 - ERROR - No valid moves available!
+2025-06-17 20:31:59,539 - WARNING - No valid moves available!
+2025-06-17 20:31:59,544 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:59,546 - ERROR - No valid moves available!
+2025-06-17 20:31:59,572 - WARNING - No valid moves available!
+2025-06-17 20:31:59,573 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 20:31:59,578 - ERROR - No valid moves available!
+2025-06-17 21:02:45,224 - WARNING - No valid moves available!
+2025-06-17 21:02:45,230 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 21:02:45,245 - ERROR - No valid moves available!
+2025-06-17 21:05:10,290 - WARNING - No valid moves available!
+2025-06-17 21:05:10,297 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 21:05:10,297 - ERROR - No valid moves available!
+2025-06-17 21:06:32,737 - WARNING - No valid moves available!
+2025-06-17 21:06:32,737 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 21:06:32,742 - ERROR - No valid moves available!
+2025-06-17 21:06:34,516 - WARNING - No valid moves available!
+2025-06-17 21:06:34,522 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 21:06:34,529 - ERROR - No valid moves available!
+2025-06-17 21:06:35,553 - WARNING - No valid moves available!
+2025-06-17 21:06:35,574 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 21:06:35,580 - ERROR - No valid moves available!
+2025-06-17 21:06:35,596 - WARNING - No valid moves available!
+2025-06-17 21:06:35,596 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 21:06:35,596 - ERROR - No valid moves available!
+2025-06-17 21:06:35,607 - WARNING - No valid moves available!
+2025-06-17 21:06:35,608 - WARNING - AI generated invalid move: 0, choosing random valid move instead
+2025-06-17 21:06:35,609 - ERROR - No valid moves available!
+2025-06-17 22:23:14,839 - INFO - Model saved to ai/models\model_depth_8_date_2025-06-17_22_23_02.pkl
+2025-06-17 22:23:14,840 - INFO - Training completed in 4 hours, 27 minutes, 45 seconds

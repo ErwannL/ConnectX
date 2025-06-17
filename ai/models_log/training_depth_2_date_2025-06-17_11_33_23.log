@@ -1,0 +1,9 @@
+2025-06-17 11:33:23,738 - INFO - Training log initialized: ai/models_log\training_depth_2_date_2025-06-17_11_33_23.log
+2025-06-17 11:33:23,866 - INFO - Starting new training with depth 2
+2025-06-17 11:33:23,866 - INFO - Generating all board positions for exactly 2 moves (7^2 potential combinations). This may take a while...
+2025-06-17 11:33:23,891 - INFO - Generated 49 unique board positions for depth 2.
+2025-06-17 11:33:23,891 - INFO - Total combinations/states to evaluate: 49
+2025-06-17 11:33:23,891 - INFO - AI evaluator initialized with max_depth: 2 (using training depth)
+2025-06-17 11:33:23,898 - INFO - Using 12 worker threads for training (75% of 16 CPU cores)
+2025-06-17 11:34:00,551 - INFO - Model saved to ai/models\model_depth_2_date_2025-06-17_11_34_00.pkl
+2025-06-17 11:34:00,552 - INFO - Training completed in 36 seconds

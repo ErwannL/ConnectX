@@ -243,6 +243,117 @@ class FullscreenToggleButton:
             return True
         return False
 
+class ModelSelector:
+    def __init__(self, x, y, width=300, height=200, font_size=24):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.font = pygame.font.SysFont('Comic Sans MS', font_size)
+        self.small_font = pygame.font.SysFont('Comic Sans MS', 18)
+        self.selected_model = None
+        self.models = []
+        self.scroll_offset = 0
+        self.max_visible = 6
+        self.load_models()
+        
+    def load_models(self):
+        """Charge la liste des modèles disponibles"""
+        self.models = []
+        model_dir = "ai/models"
+        if os.path.exists(model_dir):
+            model_files = [f for f in os.listdir(model_dir) if f.endswith('.pkl')]
+            for model_file in model_files:
+                try:
+                    # Extraire la profondeur et la date du nom de fichier
+                    if 'depth_' in model_file:
+                        depth = int(model_file.split('depth_')[1].split('_')[0])
+                        # Obtenir la date de modification
+                        mtime = os.path.getmtime(os.path.join(model_dir, model_file))
+                        self.models.append({
+                            'file': model_file,
+                            'path': os.path.join(model_dir, model_file),
+                            'depth': depth,
+                            'date': mtime
+                        })
+                except:
+                    continue
+            
+            # Trier par profondeur (descendant), puis par date (descendant)
+            self.models.sort(key=lambda x: (x['depth'], x['date']), reverse=True)
+            
+            # Sélectionner automatiquement le modèle avec la plus grande profondeur et le plus récent
+            if self.models:
+                self.selected_model = self.models[0]['path']
+                logging.info(f"Auto-selected model: {os.path.basename(self.models[0]['file'])} (depth: {self.models[0]['depth']})")
+    
+    def draw(self, screen):
+        # Dessiner le fond
+        rect = pygame.Rect(self.x, self.y, self.width, self.height)
+        pygame.draw.rect(screen, BLACK, rect)
+        pygame.draw.rect(screen, WHITE, rect, 2)
+        
+        # Titre
+        title = self.font.render("Trained Models", True, WHITE)
+        screen.blit(title, (self.x + 10, self.y + 10))
+        
+        # Liste des modèles
+        start_y = self.y + 50
+        visible_models = self.models[self.scroll_offset:self.scroll_offset + self.max_visible]
+        
+        for i, model in enumerate(visible_models):
+            model_y = start_y + i * 25
+            if model_y + 25 > self.y + self.height - 10:
+                break
+                
+            # Fond de la ligne
+            line_rect = pygame.Rect(self.x + 5, model_y, self.width - 10, 23)
+            is_selected = (model['path'] == self.selected_model)
+            color = (50, 50, 50) if is_selected else BLACK
+            pygame.draw.rect(screen, color, line_rect)
+            pygame.draw.rect(screen, WHITE, line_rect, 1)
+            
+            # Texte du modèle
+            model_text = f"Depth {model['depth']} - {os.path.basename(model['file'])}"
+            text_surface = self.small_font.render(model_text, True, WHITE)
+            screen.blit(text_surface, (self.x + 10, model_y + 2))
+        
+        # Indicateur de scroll
+        if len(self.models) > self.max_visible:
+            scroll_text = f"Scroll: {self.scroll_offset + 1}-{min(self.scroll_offset + self.max_visible, len(self.models))} of {len(self.models)}"
+            scroll_surface = self.small_font.render(scroll_text, True, WHITE)
+            screen.blit(scroll_surface, (self.x + 10, self.y + self.height - 25))
+    
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if event.button == 1:  # Clic gauche
+                # Vérifier si on clique sur un modèle
+                start_y = self.y + 50
+                visible_models = self.models[self.scroll_offset:self.scroll_offset + self.max_visible]
+                
+                for i, model in enumerate(visible_models):
+                    model_y = start_y + i * 25
+                    if model_y + 25 > self.y + self.height - 10:
+                        break
+                    
+                    line_rect = pygame.Rect(self.x + 5, model_y, self.width - 10, 23)
+                    if line_rect.collidepoint(event.pos):
+                        self.selected_model = model['path']
+                        return True
+                        
+            elif event.button == 4:  # Scroll up
+                if self.scroll_offset > 0:
+                    self.scroll_offset -= 1
+                    return True
+            elif event.button == 5:  # Scroll down
+                if self.scroll_offset + self.max_visible < len(self.models):
+                    self.scroll_offset += 1
+                    return True
+        return False
+    
+    def get_selected_model(self):
+        return self.selected_model
+
 class Game:
     def __init__(self, model_file=None, debug_mode=False):
         # Initialize pygame
@@ -272,9 +383,10 @@ class Game:
         # Initialize game settings
         self.settings = Settings()
         self.ai_difficulty = self.settings.get_ai_difficulty()
+        self.model_file = model_file  # Store the model file for AI reinitialization
         
         # Initialize AI with new constructor signature
-        self.ai_player = AI(difficulty=self.ai_difficulty, debug_mode=debug_mode)
+        self.ai_player = AI(difficulty=self.ai_difficulty, debug_mode=debug_mode, model_file=model_file)
         
         # Initialize game window and drawing parameters
         self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -332,6 +444,16 @@ class Game:
         self.logger = logging.getLogger('game')
         self.ai_logger = logging.getLogger('ai_reflection')
         self.game_logger = GameLogger(debug_mode)  # Ajout du GameLogger
+        
+        # Log initial du mode de jeu
+        if self.model_file:
+            model_name = os.path.basename(self.model_file)
+            self.logger.info(f"=== GAME INITIALIZED: AI MODEL MODE ===")
+            self.logger.info(f"Model: {model_name}")
+        else:
+            self.logger.info(f"=== GAME INITIALIZED: AI {self.ai_difficulty} MODE ===")
+            self.logger.info(f"Difficulty: {self.ai_difficulty}")
+        self.logger.info(f"Debug mode: {self.debug_mode}")
 
     def init_buttons(self):
         button_width = 240
@@ -358,8 +480,15 @@ class Game:
 
     def init_play_menu_controls(self):
         center_x = self.screen.get_width() // 2
-        self.ai_checkbox_list = AICheckboxList(center_x + 80, self.screen.get_height()//2 - 40, ["EASY", "MEDIUM", "HARD"], ["EASY", "MEDIUM", "HARD"].index(self.ai_difficulty))
-        self.toggle_starter = ToggleButton(center_x + 80, self.screen.get_height()//2 + 60, 220, 60, ["Player", "AI"], 0)
+        # Ajouter "MODEL" aux options de l'IA
+        ai_options = ["EASY", "MEDIUM", "HARD", "MODEL"]
+        # Si un modèle est spécifié en ligne de commande, sélectionner MODEL par défaut
+        default_index = 3 if self.model_file else ["EASY", "MEDIUM", "HARD"].index(self.ai_difficulty)
+        self.ai_checkbox_list = AICheckboxList(center_x + 80, self.screen.get_height()//2 - 40, ai_options, default_index, font_size=24)
+        self.toggle_starter = ToggleButton(center_x + 80, self.screen.get_height()//2 + 60, 220, 60, ["Player", "AI"], 0, font_size=24)
+        
+        # Initialiser le sélecteur de modèles mais ne pas l'afficher
+        self.model_selector = ModelSelector(center_x - 350, self.screen.get_height()//2 - 100)
 
     def load_sounds(self):
         self.music_loaded = False
@@ -610,7 +739,7 @@ class Game:
     def draw_play_menu(self):
         self.screen.fill(BLUE)  # Utilise BLUE pour le fond
         center_x = self.screen.get_width() // 2
-        title_font = pygame.font.SysFont('Comic Sans MS', 40)
+        title_font = pygame.font.SysFont('Comic Sans MS', 36)  # Réduit de 40 à 36
         title_text = title_font.render("Choose Game Mode", True, WHITE)
         title_rect = title_text.get_rect(center=(center_x, 40))
         self.screen.blit(title_text, title_rect)
@@ -618,54 +747,54 @@ class Game:
         left_x = center_x - 300
         right_x = center_x + 80
         col_width = 300
-        left_box_height = 320
-        right_box_height = 500
-        section_font = pygame.font.SysFont('Comic Sans MS', 32)
-        box_y_offset = -120
+        left_box_height = 300  # Réduit de 320 à 300
+        right_box_height = 480  # Réduit de 500 à 480
+        section_font = pygame.font.SysFont('Comic Sans MS', 28)  # Réduit de 32 à 28
+        box_y_offset = -100  # Réduit de -120 à -100
         
         # Draw left box
         left_box_top = self.screen.get_height()//2 - 100 + box_y_offset
         pygame.draw.rect(self.screen, WHITE, (left_x-30, left_box_top, col_width, left_box_height), 2)
         left_title = section_font.render("Play vs Friend", True, WHITE)
-        self.screen.blit(left_title, (left_x, left_box_top + 20))
-        self.play_vs_friend_button.rect.topleft = (left_x - 30 + (col_width - self.play_vs_friend_button.rect.width)//2, left_box_top + left_box_height - self.play_vs_friend_button.rect.height - 30)
+        self.screen.blit(left_title, (left_x, left_box_top + 15))  # Réduit de 20 à 15
+        self.play_vs_friend_button.rect.topleft = (left_x - 30 + (col_width - self.play_vs_friend_button.rect.width)//2, left_box_top + left_box_height - self.play_vs_friend_button.rect.height - 25)  # Réduit de 30 à 25
         self.play_vs_friend_button.draw(self.screen)
         
         # Draw right box
         right_box_top = self.screen.get_height()//2 - 120 + box_y_offset
         pygame.draw.rect(self.screen, WHITE, (right_x-30, right_box_top, col_width, right_box_height), 2)
         right_title = section_font.render("Play vs AI", True, WHITE)
-        self.screen.blit(right_title, (right_x, right_box_top + 20))
+        self.screen.blit(right_title, (right_x, right_box_top + 15))  # Réduit de 20 à 15
         
         # AI level checkboxes
         self.ai_checkbox_list.x = right_x + 20
-        self.ai_checkbox_list.y = right_box_top + 70
-        self.ai_checkbox_list.spacing = 70
+        self.ai_checkbox_list.y = right_box_top + 60  # Réduit de 70 à 60
+        self.ai_checkbox_list.spacing = 60  # Réduit de 70 à 60
         self.ai_checkbox_list.draw(self.screen)
         
         # Toggle starter
-        toggle_label_font = pygame.font.SysFont('Comic Sans MS', 28)
+        toggle_label_font = pygame.font.SysFont('Comic Sans MS', 24)  # Réduit de 28 à 24
         toggle_label = toggle_label_font.render("Start:", True, WHITE)
         toggle_label_x = right_x + 70 + self.toggle_starter.rect.width//4
-        toggle_label_y = right_box_top + 70 + self.ai_checkbox_list.spacing * len(self.ai_checkbox_list.options) + 10
+        toggle_label_y = right_box_top + 60 + self.ai_checkbox_list.spacing * len(self.ai_checkbox_list.options) + 8  # Réduit de 70+10 à 60+8
         toggle_label_rect = toggle_label.get_rect(center=(right_x + 70 + self.toggle_starter.rect.width//2, toggle_label_y))
         self.screen.blit(toggle_label, toggle_label_rect)
         
-        self.toggle_starter.rect.topleft = (right_x + 40, toggle_label_rect.bottom + 10)
-        self.toggle_starter.rect.width = 200
-        self.toggle_starter.rect.height = 70
+        self.toggle_starter.rect.topleft = (right_x + 40, toggle_label_rect.bottom + 8)  # Réduit de 10 à 8
+        self.toggle_starter.rect.width = 180  # Réduit de 200 à 180
+        self.toggle_starter.rect.height = 60  # Réduit de 70 à 60
         self.toggle_starter.draw(self.screen)
         
         # Play vs AI button
-        self.play_vs_ai_button.rect.topleft = (right_x - 30 + (col_width - self.play_vs_ai_button.rect.width)//2, right_box_top + right_box_height - self.play_vs_ai_button.rect.height - 30)
-        self.play_vs_ai_button.rect.width = 260
-        self.play_vs_ai_button.rect.height = 60
+        self.play_vs_ai_button.rect.topleft = (right_x - 30 + (col_width - self.play_vs_ai_button.rect.width)//2, right_box_top + right_box_height - self.play_vs_ai_button.rect.height - 25)  # Réduit de 30 à 25
+        self.play_vs_ai_button.rect.width = 240  # Réduit de 260 à 240
+        self.play_vs_ai_button.rect.height = 50  # Réduit de 60 à 50
         self.play_vs_ai_button.draw(self.screen)
         
         # Go Back button
-        self.go_back_playmenu.rect.topleft = (center_x - 120, self.screen.get_height()//2 + 240)
+        self.go_back_playmenu.rect.topleft = (center_x - 120, self.screen.get_height()//2 + 220)  # Réduit de 240 à 220
         self.go_back_playmenu.rect.width = 240
-        self.go_back_playmenu.rect.height = 60
+        self.go_back_playmenu.rect.height = 50  # Réduit de 60 à 50
         self.go_back_playmenu.draw(self.screen)
         
         pygame.display.update()
@@ -721,14 +850,18 @@ class Game:
                 self.toggle_fullscreen()
         
         if self.ai_checkbox_list.handle_event(event):
-            self.vs_ai = self.ai_checkbox_list.selected_index == 1
+            # Mettre à jour vs_ai basé sur la sélection (EASY, MEDIUM, HARD, MODEL)
+            self.vs_ai = self.ai_checkbox_list.selected_index in [1, 2, 3]  # MEDIUM, HARD, MODEL
             if self.vs_ai:
                 # Si l'IA est sélectionnée, on réinitialise les pièces
                 self.human_piece = 2  # L'humain joue en second
                 self.ai_piece = 1     # L'IA joue en premier
                 # On respecte le choix du joueur qui commence
                 self.current_player = self.human_piece if not self.ai_starts else self.ai_piece
-                logging.getLogger('game').info("AI mode selected")
+                if self.ai_checkbox_list.selected_index == 3:  # MODEL
+                    logging.getLogger('game').info("AI MODEL mode selected")
+                else:
+                    logging.getLogger('game').info("AI mode selected")
             else:
                 # Si l'humain joue seul, on réinitialise les pièces
                 self.human_piece = 1
@@ -755,15 +888,39 @@ class Game:
         
         if self.play_vs_ai_button.handle_event(event):
             self.vs_ai = True
-            self.ai_difficulty = self.ai_checkbox_list.options[self.ai_checkbox_list.selected_index]
+            selected_option = self.ai_checkbox_list.options[self.ai_checkbox_list.selected_index]
+            
+            # Déterminer le modèle à utiliser automatiquement
+            model_to_use = None
+            if selected_option == "MODEL":
+                # Utiliser automatiquement le meilleur modèle disponible
+                model_to_use = self.model_selector.get_selected_model()
+                if not model_to_use:
+                    logging.getLogger('game').warning("No model available, using default AI")
+                    selected_option = "HARD"
+                    model_to_use = None
+            elif self.model_file:
+                # Si un modèle a été spécifié en ligne de commande, l'utiliser
+                model_to_use = self.model_file
+            
+            # Mettre à jour la difficulté et le modèle
+            self.ai_difficulty = selected_option
+            self.model_file = model_to_use
             self.set_ai_difficulty(self.ai_difficulty)
             self.settings.update_setting('ai_difficulty', self.ai_difficulty)
+            
             # On respecte le choix du joueur qui commence
             self.current_player = self.human_piece if not self.ai_starts else self.ai_piece
             self.reset_game()
             # Start new game for AI
             self.game_state = GameState.PLAYING
-            logging.getLogger('game').info(f"Starting game vs AI (difficulty: {self.ai_difficulty}, AI {'starts' if self.ai_starts else 'does not start'})")
+            
+            # Log amélioré pour indiquer le mode de jeu
+            if model_to_use:
+                model_name = os.path.basename(model_to_use)
+                logging.getLogger('game').info(f"Starting game vs AI MODEL: {model_name} (AI {'starts' if self.ai_starts else 'does not start'})")
+            else:
+                logging.getLogger('game').info(f"Starting game vs AI {self.ai_difficulty} (AI {'starts' if self.ai_starts else 'does not start'})")
             return True
         
         if self.go_back_playmenu.handle_event(event):
@@ -944,7 +1101,7 @@ class Game:
         logging.getLogger('game').debug("Board reset.")
         
         # Réinitialiser l'IA avec les paramètres de dessin
-        self.ai_player = AI(difficulty=self.ai_difficulty, debug_mode=self.debug_mode)
+        self.ai_player = AI(difficulty=self.ai_difficulty, debug_mode=self.debug_mode, model_file=self.model_file)
         self.ai_player.set_drawing_params({
             'board_x': self.board_x,
             'board_y': self.board_y,
@@ -961,15 +1118,30 @@ class Game:
         if self.vs_ai:
             # On respecte le choix du joueur qui commence
             self.current_player = self.human_piece if not self.ai_starts else self.ai_piece
-            logging.getLogger('game').info(f"AI {'starts' if self.ai_starts else 'does not start'} the game")
+            if self.model_file:
+                model_name = os.path.basename(self.model_file)
+                logging.getLogger('game').info(f"Game reset - AI MODEL: {model_name} {'starts' if self.ai_starts else 'does not start'}")
+            else:
+                logging.getLogger('game').info(f"Game reset - AI {self.ai_difficulty} {'starts' if self.ai_starts else 'does not start'}")
         else:
             self.current_player = 1  # Le joueur 1 commence toujours
-            logging.getLogger('game').info("Player 1 starts the game")
+            logging.getLogger('game').info("Game reset - Player 1 starts the game")
 
     def set_ai_difficulty(self, difficulty):
         """Set AI difficulty and update AI player"""
         self.ai_difficulty = difficulty
-        self.ai_player = AI(difficulty=self.ai_difficulty, debug_mode=self.debug_mode)
+        
+        # Déterminer le modèle à utiliser
+        model_to_use = None
+        if difficulty == "MODEL":
+            # Utiliser le modèle sélectionné ou le modèle par défaut
+            if hasattr(self, 'model_selector'):
+                model_to_use = self.model_selector.get_selected_model()
+            if not model_to_use:
+                model_to_use = self.model_file  # Modèle spécifié en ligne de commande
+        
+        # Réinitialiser l'AI avec le bon modèle
+        self.ai_player = AI(difficulty=self.ai_difficulty, debug_mode=self.debug_mode, model_file=model_to_use)
         self.ai_player.set_drawing_params({
             'board_x': self.board_x,
             'board_y': self.board_y,
@@ -981,13 +1153,20 @@ class Game:
             'BLACK': BLACK,
             'player_colors': self.player_colors
         })
-        if difficulty == "HARD":
-            # Use 1/4 of CPU cores for depth calculation
-            cpu_cores = os.cpu_count() or 4  # Default to 4 if cpu_count() returns None
-            self.ai_player.depth = max(6, cpu_cores // 4)  # Ensure minimum depth of 6 for hard mode
-            logging.info(f"Hard AI depth set to {self.ai_player.depth} (1/4 of {cpu_cores} CPU cores)")
+        
+        # Log amélioré pour indiquer le mode de jeu
+        if model_to_use:
+            model_name = os.path.basename(model_to_use)
+            logging.info(f"AI mode set to MODEL: {model_name}")
         else:
-            self.ai_player.depth = 4  # Default depth for other difficulties
+            if difficulty == "HARD":
+                # Use 1/4 of CPU cores for depth calculation
+                cpu_cores = os.cpu_count() or 4  # Default to 4 if cpu_count() returns None
+                self.ai_player.depth = max(6, cpu_cores // 4)  # Ensure minimum depth of 6 for hard mode
+                logging.info(f"AI mode set to HARD (depth: {self.ai_player.depth}, 1/4 of {cpu_cores} CPU cores)")
+            else:
+                self.ai_player.depth = 4  # Default depth for other difficulties
+                logging.info(f"AI mode set to {difficulty} (depth: {self.ai_player.depth})")
         logging.debug(f"AI difficulty set to {difficulty}, depth: {self.ai_player.depth}")
 
     def check_win(self, piece):

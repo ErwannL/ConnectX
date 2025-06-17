@@ -295,8 +295,8 @@ class AITrainer:
 
             # Rest of the training setup...
             ai_difficulty = "HARD"
-            ai_max_depth_for_eval = min(self.depth, 4) if self.depth is not None else 3
-            logging.info(f"AI evaluator initialized with max_depth: {ai_max_depth_for_eval}")
+            ai_max_depth_for_eval = self.depth if self.depth is not None else 6
+            logging.info(f"AI evaluator initialized with max_depth: {ai_max_depth_for_eval} (using training depth)")
 
             cpu_count = os.cpu_count() or 4
             max_workers = max(1, int(cpu_count * 0.75))

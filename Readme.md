@@ -8,10 +8,11 @@ A Python-based Connect Four game featuring dynamic AI opponents, customizable se
 
 ### Game Features
 - Play against a friend or AI
-- Three AI difficulty levels:
+- Four AI difficulty levels:
   - Easy: Makes random valid moves
   - Medium: Looks for winning moves and blocks opponent's winning moves
-  - Hard: Uses minimax algorithm with alpha-beta pruning and pre-trained models
+  - Hard: Uses minimax algorithm with alpha-beta pruning
+  - Model: Uses pre-trained models for optimal play (NEW!)
 - Customizable player colors
 - Adjustable music and sound effects
 - Fullscreen/windowed mode toggle
@@ -21,7 +22,8 @@ A Python-based Connect Four game featuring dynamic AI opponents, customizable se
 ### AI Features
 - Multi-threaded CPU optimization (uses 75% of available cores)
 - Dynamic AI depth based on CPU cores (Hard mode)
-- Pre-trained model support
+- Pre-trained model support with automatic selection
+- Enhanced move selection with win/block detection
 - Development mode with AI visualization
 - Comprehensive logging system
 - Training data generation and model management
@@ -54,7 +56,7 @@ Development mode provides:
 
 ### Using a Trained Model
 ```bash
-./launch.sh model models/[model].pkl
+./launch.sh model ai/models/[model].pkl
 ```
 
 ### Training a New Model
@@ -65,9 +67,9 @@ Where `depth` is an optional parameter specifying the search depth (default: ful
 
 Training process:
 1. Generates all possible board positions up to specified depth
-2. Evaluates each position using minimax algorithm
-3. Saves the model to `models/` directory
-4. Creates training logs in `training_ai/` directory
+2. Evaluates each position using minimax algorithm at full depth
+3. Saves the model to `ai/models/` directory
+4. Creates training logs in `ai/models_log/` directory
 
 Training controls:
 - Ctrl+Space: Pause/resume training
@@ -108,10 +110,11 @@ Training controls:
 - `game_settings.json`: User preferences
 
 ### Directories
-- `models/`: Saved AI models
-- `training_ai/`: Training logs
+- `ai/models/`: Saved AI models
+- `ai/models_log/`: Training logs
+- `ai/models_checkpoints/`: Training checkpoints (auto-generated)
 - `assets/`: Game assets (music, sounds)
-- `checkpoints/`: Training checkpoints (auto-generated)
+- `logs/`: Game and AI logs
 
 ### Scripts
 - `launch.sh`: Game launcher script
@@ -132,8 +135,24 @@ Training controls:
 
 ### AI Implementation
 For detailed technical information about:
-- In-game AI: See [in_game_ai.md](documentation/in_game_ai.md)
-- AI Training: See [AI_Training_Technical.md](documentation/AI_Training_Technical.md)
+- **AI Usage Guide**: See [AI_Usage_Guide.md](documentation/AI_Usage_Guide.md) - User-friendly guide for playing against AI
+- **In-game AI**: See [In_game_ai.md](documentation/In_game_ai.md) - Technical details of AI implementation
+- **AI Training**: See [AI_Training_Technical.md](documentation/AI_Training_Technical.md) - Technical details of model training
+
+## Recent Updates
+
+### AI Improvements
+- **Model Mode**: New difficulty level using pre-trained models
+- **Automatic Model Selection**: System automatically chooses the best available model
+- **Enhanced Move Selection**: Priority system (win → block → model → minimax)
+- **Improved Logging**: Clear indication of AI behavior and decisions
+- **Corrected Training**: Models now use full training depth for evaluation
+
+### User Experience
+- **Streamlined Interface**: No manual model selection required
+- **Better Feedback**: Clear logs showing which AI mode and model are active
+- **Fallback Handling**: Graceful degradation when models are unavailable
+- **Performance Optimization**: Faster model loading and evaluation
 
 ## License
 

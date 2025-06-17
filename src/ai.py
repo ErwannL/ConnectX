@@ -33,7 +33,7 @@ class Connect4Net(nn.Module):
         return x
 
 class AI:
-    def __init__(self, difficulty="HARD", debug_mode=False, is_in_game=True):
+    def __init__(self, difficulty="HARD", debug_mode=False, is_in_game=True, model_file=None):
         self.difficulty = difficulty
         self.debug_mode = debug_mode
         self.depth = 6  # Augmenté de 4 à 6 par défaut
@@ -52,38 +52,52 @@ class AI:
         # Load neural network model if available and if in game mode
         if is_in_game:
             try:
-                # Chercher le modèle avec la plus grande profondeur dans le dossier models
-                model_dir = "ai/models"
-                if os.path.exists(model_dir):
-                    model_files = [f for f in os.listdir(model_dir) if f.endswith('.pkl')]
-                    if model_files:
-                        # Extraire la profondeur de chaque fichier et trier
-                        def get_depth_and_time(filename):
-                            try:
-                                # Extraire la profondeur du nom de fichier (model_depth_X_date_...)
-                                depth = int(filename.split('depth_')[1].split('_')[0])
-                                # Obtenir la date de modification
-                                mtime = os.path.getmtime(os.path.join(model_dir, filename))
-                                return (depth, mtime)
-                            except:
-                                return (0, 0)  # En cas d'erreur, considérer comme profondeur 0
+                if model_file and os.path.exists(model_file):
+                    # Charger le modèle spécifié
+                    self.logger.info(f"Loading specified model: {model_file}")
+                    with open(model_file, 'rb') as f:
+                        self.model = pickle.load(f)
+                    
+                    # Extraire la profondeur du nom de fichier
+                    try:
+                        depth = int(model_file.split('depth_')[1].split('_')[0])
+                        self.logger.info(f"AI MODEL loaded successfully: {os.path.basename(model_file)} (depth: {depth})")
+                    except:
+                        self.logger.info(f"AI MODEL loaded successfully: {os.path.basename(model_file)} (depth: unknown)")
                         
-                        # Trier d'abord par profondeur (descendant), puis par date (descendant)
-                        model_files.sort(key=get_depth_and_time, reverse=True)
-                        model_path = os.path.join(model_dir, model_files[0])
-                        
-                        # Extraire la profondeur du modèle choisi
-                        depth = get_depth_and_time(model_files[0])[0]
-                        self.logger.info(f"Loading model with highest depth ({depth}): {model_path}")
-                        
-                        # Charger le modèle pickle
-                        with open(model_path, 'rb') as f:
-                            self.model = pickle.load(f)
-                        self.logger.info(f"Neural network model loaded successfully (depth: {depth})")
-                    else:
-                        self.logger.warning("No neural network model found in models directory")
                 else:
-                    self.logger.warning("Models directory not found")
+                    # Chercher le modèle avec la plus grande profondeur dans le dossier models
+                    model_dir = "ai/models"
+                    if os.path.exists(model_dir):
+                        model_files = [f for f in os.listdir(model_dir) if f.endswith('.pkl')]
+                        if model_files:
+                            # Extraire la profondeur de chaque fichier et trier
+                            def get_depth_and_time(filename):
+                                try:
+                                    # Extraire la profondeur du nom de fichier (model_depth_X_date_...)
+                                    depth = int(filename.split('depth_')[1].split('_')[0])
+                                    # Obtenir la date de modification
+                                    mtime = os.path.getmtime(os.path.join(model_dir, filename))
+                                    return (depth, mtime)
+                                except:
+                                    return (0, 0)  # En cas d'erreur, considérer comme profondeur 0
+                            
+                            # Trier d'abord par profondeur (descendant), puis par date (descendant)
+                            model_files.sort(key=get_depth_and_time, reverse=True)
+                            model_path = os.path.join(model_dir, model_files[0])
+                            
+                            # Extraire la profondeur du modèle choisi
+                            depth = get_depth_and_time(model_files[0])[0]
+                            self.logger.info(f"Loading AI MODEL with highest depth ({depth}): {os.path.basename(model_path)}")
+                            
+                            # Charger le modèle pickle
+                            with open(model_path, 'rb') as f:
+                                self.model = pickle.load(f)
+                            self.logger.info(f"AI MODEL loaded successfully: {os.path.basename(model_path)} (depth: {depth})")
+                        else:
+                            self.logger.warning("No neural network model found in models directory")
+                    else:
+                        self.logger.warning("Models directory not found")
             except Exception as e:
                 self.logger.warning(f"Could not load neural network model: {e}. Using heuristic evaluation only.")
                 self.model = None
@@ -120,20 +134,47 @@ class AI:
         self._log_board_state(board, player)
         
         try:
-            if self.difficulty == "EASY":
+            # 1. Vérifier les coups gagnants immédiats (priorité absolue)
+            for col in range(7):
+                if self._is_valid_move(board, col):
+                    temp_board = board.copy()
+                    if self._make_move(temp_board, col, player):
+                        if self._check_win(temp_board, player):
+                            if self.is_in_game:
+                                self.logger.info(f"AI found immediate winning move in column {col}")
+                            return col
+            
+            # 2. Bloquer les coups gagnants de l'adversaire (priorité haute)
+            opponent = 3 - player
+            for col in range(7):
+                if self._is_valid_move(board, col):
+                    temp_board = board.copy()
+                    if self._make_move(temp_board, col, opponent):
+                        if self._check_win(temp_board, opponent):
+                            if self.is_in_game:
+                                self.logger.info(f"AI found blocking move in column {col}")
+                            return col
+            
+            # 3. Utiliser le modèle ou l'algorithme selon la difficulté
+            if self.model is not None:
+                # Mode MODEL - utiliser le réseau de neurones
+                move = self._get_neural_network_move(board, player)
+                if self.is_in_game:
+                    self.logger.info(f"AI MODEL chose column {move}")
+            elif self.difficulty == "EASY":
                 move = self._easy_move(board)
                 if self.is_in_game:
-                    self.logger.info(f"Easy AI chose column {move}")
+                    self.logger.info(f"AI EASY chose column {move}")
             elif self.difficulty == "MEDIUM":
                 move = self._medium_move(board, player)
                 if self.is_in_game:
-                    self.logger.info(f"Medium AI chose column {move}")
+                    self.logger.info(f"AI MEDIUM chose column {move}")
             else:  # HARD
                 # Use minimax with neural network evaluation for final decision
                 move, score = self._hard_move(board, player)
                 self._log_move_evaluation(move, score, self.depth)
                 if self.is_in_game:
-                    self.logger.info(f"Hard AI chose column {move} (depth: {self.depth})")
+                    self.logger.info(f"AI HARD chose column {move} (depth: {self.depth})")
             
             # Validate move before returning
             if move is None or not self._is_valid_location(board, move):
